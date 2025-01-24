@@ -1,12 +1,12 @@
 import { Sidebar, TitleCenter } from "@/exports";
-//import Cascadia from "@/fonts";
 import type { Metadata } from "next";
+import Verdana from "next/font/local";
 import "./globals.css";
 
-/* const Cascadia = Cascadia({
-  variable: "",
-  subsets: "",
-}); */
+const FontVerdana = Verdana({
+  src: '../fonts/Verdana.ttf',
+  variable: '--verdana'
+})
 
 /* const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="pt-br">
-      <body className={`antialiased`}>
+    <html lang="pt-br" className={FontVerdana.variable}>
+      <body className="">
         <Sidebar></Sidebar>
         <TitleCenter></TitleCenter>
         {children}
