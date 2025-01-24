@@ -1,6 +1,12 @@
-import SectionOne from "@/components/SectionOne/SectionOne";
+import { Sidebar, TitleCenter } from "@/exports";
+//import Cascadia from "@/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
+
+/* const Cascadia = Cascadia({
+  variable: "",
+  subsets: "",
+}); */
 
 /* const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,13 +23,12 @@ export const metadata: Metadata = {
   description: "Website created by Fabio Ghizoni using NextJS",
 };
 
-export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="pt-br">
       <body className={`antialiased`}>
-        <SectionOne>
-
-        </SectionOne>
+        <Sidebar></Sidebar>
+        <TitleCenter></TitleCenter>
         {children}
       </body>
     </html>
