@@ -13,7 +13,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        sans: ['var(--verdana)']  
+        verdana: ['var(--verdana)'],
+        cinzel: ['var(--cinzel-regular)']
       }
     },
   },

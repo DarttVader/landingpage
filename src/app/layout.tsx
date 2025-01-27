@@ -1,11 +1,12 @@
-import { Sidebar, TitleCenter } from "@/exports";
+import { CopyRight, SectionOne, Sidebar } from "@/exports";
 import type { Metadata } from "next";
 import Verdana from "next/font/local";
 import "./globals.css";
 
+
 const FontVerdana = Verdana({
-  src: '../fonts/Verdana.ttf',
-  variable: '--verdana'
+  src: '../fonts/Verdana/verdana.ttf',
+  variable: '--verdana',
 })
 
 /* const geistSans = Geist({
@@ -25,10 +26,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="pt-br" className={FontVerdana.variable}>
-      <body className="">
+    <html lang="pt-br" className={`${FontVerdana.variable} font-verdana`}>
+      <body className="antialiased">
         <Sidebar></Sidebar>
-        <TitleCenter></TitleCenter>
+        <SectionOne></SectionOne>
+        <CopyRight></CopyRight>
         {children}
       </body>
     </html>

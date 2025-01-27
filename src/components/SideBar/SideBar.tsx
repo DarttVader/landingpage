@@ -1,34 +1,111 @@
-"use client"
-import MenuIcon from "@/exports";
+"use client";
+import { MenuIcon, MenuIconX } from "@/exports";
+import { motion } from "framer-motion";
+import Cinzel from "next/font/local";
 import { useState } from "react";
+
+const FontCinzel = Cinzel({
+  src: "../../fonts/Cinzel/Cinzel-Regular.otf",
+  variable: "--cinzel-regular",
+});
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(prevState => !prevState);
+    setIsOpen((prevState) => !prevState);
   };
 
   return (
-    <div className="flex h-[4.4rem] w-full bg-white">
-      <nav className={`antialiased rounded-br-sm flex flex-col mt-1 ml-1 pb-2 shadow-rounded-sm h-12 w-12
-      transition-all duration-500 ease-out ${isOpen ? 'fixed' : 'fixed h-[220px] w-64 mt-[-1px] ml-[-1px] bg-[#F0E3DB]'}`}>
-        <button onClick={toggleMenu} className={`${isOpen ? 'fixed' : 'fixed'} justify-items-center rounded-md py-1 px-1`}>
-          <MenuIcon fillRule="inherit" viewBox="0 0 16 16" width={16} height={16} fill="#7d6750" className={`${isOpen ? 'transition-all duration-300 ease-in-out hover:bg-black/10 rounded-lg h-12 w-12' : 'h-12 w-12'} `} />
-        </button>
-        <div className={`flex-grow transition-opacity ease-in-out duration-300 ${isOpen ? 'hidden pt-10' : 'pt-10'}`}>
-          <ul className="my-4 pr-1 text-xl">
-            <li className="pl-2 py-1 my-[2px] cursor-pointer rounded-sm transition-all ease-in-out duration-300 hover:py-2 hover:bg-[#7C654F]/30 hover:border-b hover:border-b-[#7C654F]/60">Home</li>
-            <li className="pl-2 py-1 my-[2px] cursor-pointer rounded-sm transition-all ease-in-out duration-300 hover:py-2 hover:bg-[#7C654F]/30 hover:border-b hover:border-b-[#7C654F]/60">Serviços</li>
-            <li className="pl-2 py-1 my-[2px] cursor-pointer rounded-sm transition-all ease-in-out duration-300 hover:py-2 hover:bg-[#7C654F]/30 hover:border-b hover:border-b-[#7C654F]/60">Sobre</li>
-            <li className="pl-2 py-1 my-[2px] cursor-pointer rounded-sm transition-all ease-in-out duration-300 hover:py-2 hover:bg-[#7C654F]/30 hover:border-b hover:border-b-[#7C654F]/60">Contatos</li>
-          </ul>
-        </div>
+    <div className="flex h-[3.5rem] w-full">
+      <motion.nav
+        /* ------------- TOPO DA PÁGINA(NAVBAR) ------------- */
+        className="fixed top-0 left-0 antialiased rounded-br-sm flex flex-col"
+        initial={{ width: "3rem", height: "3.5rem", backgroundColor: `#624D46 ${isOpen ? "#eae0d5" : "#eae0d5"}` }}
+        animate={{
+          width: isOpen ? "16rem" : "3rem",
+          height: isOpen ? "20rem" : "3.5rem",
+        }}
+        transition={{
+          duration: 0.5,
+          ease: "easeInOut",
+        }}
+      >
+        {/* ------------- BOTÃO DA NAVBAR ------------- */}
+        <motion.div
+          animate={{
+            rotate: isOpen ? 90 : 0,
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+        >
+          {/* ------------- ÍCONE DO BOTÃO DA NAVBAR ------------- */}
+          <MenuIcon
+            onClick={toggleMenu}
+            xmlns="http://www.w3.org/2000/svg"
+            id="Outline"
+            viewBox="0 0 24 24"
+            width={45}
+            height={45}
+            className="rounded-md border-2 border-black p-[0.20rem]"
+          />
+          <MenuIconX
+            x="0px"
+            y="0px"
+            width={18}
+            height={18}
+            id="Capa_1"
+            version="1.1"
+            xmlSpace="preserve"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          />
 
-      </nav>
+        </motion.div>
+
+        {/* ------------- LISTA DE ROTAS QUANDO ABRE A NAVBAR ------------- */}
+        <motion.div
+          className="flex-grow pt-7"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{
+            opacity: isOpen ? 1 : 0,
+            x: isOpen ? 0 : -20,
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          <ul className="my-4 pr-1 text-xl">
+            {["Home", "Serviços", "Sobre", "Contatos"].map((item, index) => (
+              <motion.li
+                key={item}
+                className="pl-2 py-1 my-[2px] cursor-pointer rounded-sm transition-all ease-in-out duration-300 
+                  hover:py-2 hover:bg-[#7C654F]/30 hover:border-b hover:border-b-[#7C654F]/60"
+                initial={{ x: -20, opacity: 0 }}
+                animate={{
+                  x: isOpen ? 0 : -20,
+                  opacity: isOpen ? 1 : 0,
+                }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                {item}
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+      </motion.nav>
+
+      {/* ------------- TÍTULO DA NAVBAR ------------- */}
+      <h1
+        className={`${FontCinzel.variable} font-cinzel text-4xl text-center content-center mx-auto`}
+      >
+        Rafaela Mazieiro
+      </h1>
     </div>
   );
 };
 
 export default Sidebar;
+
+
 
