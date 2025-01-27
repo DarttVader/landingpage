@@ -20,11 +20,12 @@ const Sidebar = () => {
     <div className="flex h-[3.5rem] w-full">
       <motion.nav
         /* ------------- TOPO DA PÁGINA(NAVBAR) ------------- */
-        className="fixed top-0 left-0 antialiased rounded-br-sm flex flex-col"
+        className="fixed antialiased p-[0.20rem] rounded-br-sm flex flex-col"
         initial={{ width: "3rem", height: "3.5rem", backgroundColor: `#624D46 ${isOpen ? "#eae0d5" : "#eae0d5"}` }}
         animate={{
           width: isOpen ? "16rem" : "3rem",
           height: isOpen ? "20rem" : "3.5rem",
+          backgroundColor: isOpen ? "#ffffff" : "",
         }}
         transition={{
           duration: 0.5,
@@ -33,23 +34,25 @@ const Sidebar = () => {
       >
         {/* ------------- BOTÃO DA NAVBAR ------------- */}
         <motion.div
-          animate={{
-            rotate: isOpen ? 90 : 0,
-          }}
           transition={{
             duration: 0.3,
           }}
         >
           {/* ------------- ÍCONE DO BOTÃO DA NAVBAR ------------- */}
+          <div className="border rounded-md w-[50px]">
           <MenuIcon
             onClick={toggleMenu}
             xmlns="http://www.w3.org/2000/svg"
             id="Outline"
-            viewBox="0 0 24 24"
-            width={45}
-            height={45}
-            className="rounded-md border-2 border-black p-[0.20rem]"
+            viewBox="0 0 26 26"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1}
+            width={48}
+            height={48}
+            className="rounded-md border pl-[2px] border-black"
           />
+          </div>
           <MenuIconX
             x="0px"
             y="0px"
