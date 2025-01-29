@@ -9,13 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        fundo: {
+          950: "#1b1b18",
+        }
       },
-      fontFamily: {
-        verdana: ['var(--verdana)'],
-        cinzel: ['var(--cinzel-regular)']
-      }
     },
   },
   plugins: [],
