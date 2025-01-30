@@ -8,10 +8,8 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        fundo: {
-          950: "#1b1b18",
-        }
+      fontFamily: {
+        poppins: ["var(--poppins)"]
       },
     },
   },

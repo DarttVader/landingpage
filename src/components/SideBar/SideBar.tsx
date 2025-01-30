@@ -1,9 +1,17 @@
+"use client"
 import { motion } from "framer-motion";
+import Lora from "next/font/local";
 
-export function Sidebar() {
-  return(
-    <motion.div className="w-full h-16 border-2 border-white">
+const FontLora = Lora({
+  src: "fonts/Lora/static/Lora-Regular.ttf"
+});
 
-    </motion.div>
+export default function SideBar() {
+  return (
+    <div>
+      <motion.nav className="w-full p-1 border-2 border-white">
+        <h1>Rafaela Mazieiro</h1>
+      </motion.nav>
+    </div>
   );
 };
