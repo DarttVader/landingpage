@@ -1,13 +1,12 @@
-import CopyRight from "@/components/copyright/copyright";
-import SectionEnd from "@/components/sectionend/sectionend";
-import SideBar from "@/components/sidebar/sidebar";
+import { CopyRight, NavBar, SectionEnd, SectionTop } from "@/exports";
 
 export default function Home() {
   return (
     <div>
-      <SideBar />
-      <CopyRight />
+      <NavBar />
+      <SectionTop />
       <SectionEnd />
+      <CopyRight />
     </div>
   );
 }

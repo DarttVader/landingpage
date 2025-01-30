@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["var(--poppins)"]
+        poppins: ["var(--poppins-regular)"],
+        cinzel: ["var(--cinzel-static)"],
       },
     },
   },

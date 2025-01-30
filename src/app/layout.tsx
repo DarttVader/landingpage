@@ -3,8 +3,8 @@ import Poppins from "next/font/local";
 import "./globals.css";
 
 const FontPoppins = Poppins({
-  src: "fonts/Poppins/Poppins-Regular.ttf",
-  variable: "--poppins",
+  src: "../fonts/Poppins/Poppins-Regular.ttf",
+  variable: "--poppins-regular",
 });
 
 export const metadata: Metadata = {
