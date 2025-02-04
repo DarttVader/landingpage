@@ -16,13 +16,17 @@ export const metadata: Metadata = {
     "Skin Beautification", "Pele bonita",
     "Your Life, Your Skin", "Sua Vida, Sua Pele",
     "Website", "Site", "Fabio Ghizoni", "Softwares",
-  ]
+  ],
+  openGraph:{
+    title: "Rafaela Mazieiro",
+    description: "Site de Rafaela Mazieiro"
+  },
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="pt-br">
-      <body className={`${FontPoppins.variable} font-poppins antialiased`}>
+      <body className={`${FontPoppins.variable} font-poppins bg-[#C49A6C] antialiased`}>
 
         {children}
       </body>

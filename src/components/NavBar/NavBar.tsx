@@ -1,7 +1,7 @@
 "use client"
-import { IconMenu } from "@/exports";
 import { easeInOut, motion } from "framer-motion";
 import Cinzel from "next/font/local";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -14,7 +14,7 @@ const FontCinzel = Cinzel({
   variable: "--cinzel-static"
 });
 
-export default function NavBar({ setMenuOpen }: NavBarProps) {
+const NavBar = ({ setMenuOpen }: NavBarProps) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
@@ -25,27 +25,24 @@ export default function NavBar({ setMenuOpen }: NavBarProps) {
 
   return (
     <motion.nav
-      initial={{ y: -20, opacity: 0 }}
+      initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: easeInOut }}
-      className={`justify-between bg-[#d3b799]/60 h-24 flex w-full`}
-    >
-      <h1 className={`${FontCinzel.variable} font-cinzel text-[#714d35] ml-2 text-4xl content-center text-center`}>Rafaela Mazieiro</h1>
-      {/* <Image src="/logo.png" alt="Logo de Rafaela Mazieiro" width={212} quality={100} unoptimized 
-      height={96} className="cursor-pointer max-h-[200px] p-1" /> */}
+      transition={{ duration: 1, ease: easeInOut }}
+      className={`justify-between bg-[#C49A6C] h-full flex w-full`}>
+
+      <Link href="/">
+        <Image src="/logo2.png" alt="Logo de Rafaela Mazieiro" width={211} height={96} quality={100} unoptimized className="m-2 hover:opacity-50"
+          sizes="(max-width: 1280px) 211px, (max-width: 1024px) 180px, (max-width: 768px) 150px, (max-width: 640px) 50px"/>
+      </Link>
 
       {/* ------------------------------------ MENU HAMBURGER ------------------------------------ */}
-      <motion.div className={`transition-all ease-in-out duration-300 ${isOpen ?
-        /* ABERTO */ "w-[30dvh] rounded-bl-sm right-0 top-0 mr-0 backdrop-blur-md z-50 fixed h-full" :
-        /* FECHADO */ "cursor-pointer rounded-md w-[50px] h-[50px] justify-items-center self-center mr-5"}`}
-        initial={{ y: -20 }}
-        animate={{ y: 0 }}>
-
-        <IconMenu className={`group ${isOpen ?
-          /* ABERTO */ "hidden" :
-          /* FECHADO */ "rounded-md text-[#714d35] hover:scale-105 p-1"}`}
-
-          onClick={toggleMenu} width="50" height="50"></IconMenu>
+      <motion.div onClick={toggleMenu}
+        className={isOpen ? 
+          /* ABERTO */ "w-[22dvh] sm:w-[25dvh] lg:w-[35dvh] xl:-[35dvh] right-0 top-0 mr-0 backdrop-blur-md z-50 fixed" :
+          /* FECHADO */ "group content-center cursor-pointer rounded-md w-[50px] h-[50px] self-center mr-5 flex flex-col justify-between hover:opacity-50 px-1 py-2"}>
+          <div className={isOpen ? "hidden" : "bg-[#714d35] h-[3px] group-hover:-translate-y-[2px]"}></div>
+          <div className={isOpen ? "hidden" : "bg-[#714d35] h-[3px]"}></div>
+          <div className={isOpen ? "hidden" : "bg-[#714d35] h-[3px] group-hover:translate-y-[2px]"}></div>  
 
         <motion.ul className={isOpen ?
           /* ABERTO */ "text-[#714d35] text-2xl text-center py-6 gap-4 flex flex-col" :
@@ -55,12 +52,13 @@ export default function NavBar({ setMenuOpen }: NavBarProps) {
           animate={{ x: isOpen ? 0 : -20, opacity: isOpen ? 1 : 0 }}
           transition={{ duration: 0.6, ease: easeInOut }}>
           <button onClick={toggleMenu} className={"hover:bg-black/10 py-2"}>Fechar</button>
-          <Link href="/" className={"hover:bg-black/10 py-2"}>Inicio</Link>
-          <Link href="/About" className={"hover:bg-black/10 py-2"}>Sobre</Link>
-          <Link href="/Contacts" className={"hover:bg-black/10 py-2"}>Contatos</Link>
-
+          <Link href="/" className="hover:bg-black/10 py-2">Inicio</Link>
+          <Link href="/About" className="hover:bg-black/10 py-2">Sobre</Link>
+          <Link href="/Contacts" className="hover:bg-black/10 py-2">Contatos</Link>
         </motion.ul>
       </motion.div>
     </motion.nav>
   );
 };
+
+export default NavBar;

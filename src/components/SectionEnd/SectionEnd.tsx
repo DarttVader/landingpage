@@ -1,7 +1,9 @@
-export default function SectionEnd() {
+const SectionEnd = () => {
   return (
     <section className="border-2 h-96 bg-white">
 
     </section>
   );
 };
+
+export default SectionEnd;

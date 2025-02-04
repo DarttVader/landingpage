@@ -5,7 +5,7 @@ const FontCinzel = Cinzel({
   variable: "--cinzel-static"
 })
 
-export default function SectionQuite() {
+const SectionQuite = () => {
   return(
     <section className="w-full h-full justify-items-center bg-[#CBB19A]">
       <div className="flex w-full h-full justify-between"> 
@@ -28,3 +28,5 @@ export default function SectionQuite() {
     </section>
   );
 }; 
+
+export default SectionQuite;
