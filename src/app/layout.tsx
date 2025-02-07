@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="pt-br">
-      <body className={`${FontPoppins.variable} font-poppins`}>
+      <body className={`${FontPoppins.variable} font-poppins bg-gradient-to-r from-[#D2A670] via-[#EDAF92] to-[#DAB68B]`}>
 
         {children}
       </body>

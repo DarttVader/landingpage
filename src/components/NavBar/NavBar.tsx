@@ -26,7 +26,7 @@ const NavBar = () => {
       {/* ------------------------------------ MENU HAMBURGER ------------------------------------ */}
       <motion.div onClick={toggleMenu}
         className={isOpen ?
-          /* ABERTO */ "h-full w-4/12 top-0 right-0 z-50 fixed":
+          /* ABERTO */ "":
           /* FECHADO */ "group content-center hover:scale-105 cursor-pointer rounded-md w-[50px] h-[50px] self-center mr-5 flex flex-col justify-between hover:opacity-50 px-1 py-2"
           }>
 
@@ -35,7 +35,7 @@ const NavBar = () => {
           <div className={isOpen ? "hidden" : "bg-[#8B3A3A] h-[3px] group-hover:translate-y-[2px]"}></div>
 
           <motion.ul className={isOpen ?
-            /* ABERTO */ "text-[#714d35] text-2xl text-center py-6 gap-4 flex flex-col" :
+            /* ABERTO */ "text-[#714d35] text-2xl fixed w-20 h-full top-0 right-0 text-center py-6 gap-4 flex flex-col bg-gradient-to-tr from-[#F4D3C4] to-[#E0C3A0]" :
             /* FECHADO */ "hidden"}
             initial={{ x: isOpen ? -20 : 0, opacity: isOpen ? 0 : 1 }}
             animate={{ x: isOpen ? 0 : -20, opacity: isOpen ? 1 : 0 }}

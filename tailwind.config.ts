@@ -11,6 +11,9 @@ export default {
         poppins: ["var(--poppins-regular)"],
         lora: ["var(--lora-regular)"],
       },
+      screens: {
+        "max-1170": { max: "1170px"},
+      }
     },
   },
   plugins: [],
