@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     description: "Site de Rafaela Mazieiro"
   },
 };
-
+                        //#C49A6C
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="pt-br">
-      <body className={`${FontPoppins.variable} font-poppins bg-gradient-to-r from-[#C49A6C] to-[#e2bebe] antialiased`}>
+      <body className={`${FontPoppins.variable} font-poppins`}>
 
         {children}
       </body>

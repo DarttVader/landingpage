@@ -1,13 +1,10 @@
-import { CopyRight, NavBar, SectionEnd, SectionQuite, SectionTop } from "@/exports";
+import { NavBar, SectionHome } from "@/exports";
 
 export default function Home() {
   return (
     <div>
       <NavBar />
-      <SectionTop />
-      <SectionQuite />
-      <SectionEnd />
-      <CopyRight />
+      <SectionHome />
     </div>
   );
-}
+};

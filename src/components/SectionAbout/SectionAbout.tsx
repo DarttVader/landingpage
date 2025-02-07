@@ -5,7 +5,7 @@ const FontLora = Lora({
   variable: "--lora-regular",
 })
 
-const SectionQuite = () => {
+const SectionAbout = () => {
   return(
     <section className="w-full h-full justify-items-center bg-[#CBB19A]">
       <div className="flex w-full h-full justify-between"> 
@@ -29,4 +29,4 @@ const SectionQuite = () => {
   );
 }; 
 
-export default SectionQuite;
+export default SectionAbout;
