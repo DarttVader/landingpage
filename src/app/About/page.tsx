@@ -1,7 +1,9 @@
-import { SectionAbout } from "@/exports"
+import { SectionAbout } from "@/exports";
 
-export default function About() {
+const About = () => {
   return(
     <SectionAbout></SectionAbout>
-  )
-}
+  );
+};
+
+export default About;

@@ -1,7 +1,9 @@
-import { SectionContacts } from "@/exports"
+import { SectionContacts } from "@/exports";
 
-export default function Contacts() {
+const Contacts = () => {
   return(
     <SectionContacts></SectionContacts>
-  )
-}
+  );
+};
+
+export default Contacts;

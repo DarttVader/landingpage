@@ -1,3 +1,4 @@
+import { NavBar, SectionHome } from "@/exports";
 import type { Metadata } from "next";
 import Poppins from "next/font/local";
 import "./globals.css";
@@ -22,12 +23,13 @@ export const metadata: Metadata = {
     description: "Site de Rafaela Mazieiro"
   },
 };
-                        //#C49A6C
+        
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="pt-br">
-      <body className={`${FontPoppins.variable} font-poppins bg-gradient-to-r from-[#D2A670] via-[#EDAF92] to-[#DAB68B]`}>
-
+      <body className={`${FontPoppins.variable} font-poppins bg-gradient-to-r`}>
+        <NavBar />
+        <SectionHome />
         {children}
       </body>
     </html >

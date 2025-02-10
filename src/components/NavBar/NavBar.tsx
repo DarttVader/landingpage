@@ -16,8 +16,7 @@ const NavBar = () => {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: easeInOut }}
-      className={`justify-between shadow-2xl bg-[url(/fundo.jpg)] border-b-2 border-[#8B3A3A] 
-        bg-cover bg-center backdrop-blur-3xl flex`}>
+      className={`${isOpen ? "" : ""}justify-between shadow-2xl border-b-2 border-[#8B3A3A] bg-gradient-to-r from-[#FFE0E0] to-[#D5A0A0] backdrop-blur-3xl flex`}>
       <Link href="/">
         <Image src="/logo1.png" alt="Logo de Rafaela Mazieiro" width={211} height={96} quality={100} unoptimized
           className="m-2 hover:scale-105 hover:opacity-50" />
@@ -35,7 +34,7 @@ const NavBar = () => {
           <div className={isOpen ? "hidden" : "bg-[#8B3A3A] h-[3px] group-hover:translate-y-[2px]"}></div>
 
           <motion.ul className={isOpen ?
-            /* ABERTO */ "text-[#714d35] text-2xl fixed w-20 h-full top-0 right-0 text-center py-6 gap-4 flex flex-col bg-gradient-to-tr from-[#F4D3C4] to-[#E0C3A0]" :
+            /* ABERTO */ "text-[#714d35] text-2xl backdrop-blur-3xl border-l-2 border-b-2 border-[#8B3A3A] fixed w-44 rounded-bl-sm top-0 right-0 text-center py-6 gap-4 flex flex-col" :
             /* FECHADO */ "hidden"}
             initial={{ x: isOpen ? -20 : 0, opacity: isOpen ? 0 : 1 }}
             animate={{ x: isOpen ? 0 : -20, opacity: isOpen ? 1 : 0 }}
@@ -47,7 +46,7 @@ const NavBar = () => {
           </motion.ul>
 
       </motion.div>
-    </motion.nav >
+    </motion.nav>
   );
 };
 
