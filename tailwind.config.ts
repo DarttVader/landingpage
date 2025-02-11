@@ -8,12 +8,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["var(--poppins-regular)"],
+        poppins: ["var(--inter-regular)"],
         lora: ["var(--lora-regular)"],
       },
       screens: {
         "max-1170": { max: "1170px"},
-      }
+      },
     },
   },
   plugins: [],
