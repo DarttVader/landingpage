@@ -16,12 +16,12 @@ const NavBar = () => {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: easeInOut }}
-      className={`${isOpen ? "" : ""}justify-between shadow-2xl border-b-2 border-[#8B3A3A] bg-gradient-to-r from-[#FFE0E0] to-[#D5A0A0] backdrop-blur-3xl flex`}>
+      className={`${isOpen ? "" : ""}justify-between shadow-2xl inset-0 border-b-2 border-[#8B3A3A] bg-[url(/fundo1.jpg)] bg-cover bg-center backdrop-blur-3xl flex`}>
       <Link href="/">
         <Image src="/logo1.png" alt="Logo de Rafaela Mazieiro" width={211} height={96} quality={100} unoptimized
           className="m-2 hover:scale-105 hover:opacity-50" />
       </Link>
-
+ 
       {/* ------------------------------------ MENU HAMBURGER ------------------------------------ */}
       <motion.div onClick={toggleMenu}
         className={isOpen ?

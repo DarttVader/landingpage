@@ -1,8 +1,12 @@
+import { NavBar, SectionHome } from "@/exports";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-
-    </div>
+    <>
+    <NavBar />
+    <SectionHome />
+    </>
   );
 };
+
+export default Home;

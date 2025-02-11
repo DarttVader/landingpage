@@ -1,4 +1,3 @@
-import { NavBar, SectionHome } from "@/exports";
 import type { Metadata } from "next";
 import Poppins from "next/font/local";
 import "./globals.css";
@@ -24,14 +23,15 @@ export const metadata: Metadata = {
   },
 };
         
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
+const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => {
   return (
     <html lang="pt-br">
-      <body className={`${FontPoppins.variable} font-poppins bg-gradient-to-r`}>
-        <NavBar />
-        <SectionHome />
+      <body className={`${FontPoppins.variable} font-poppins`}>
+
         {children}
       </body>
     </html >
   );
-}
+};
+
+export default RootLayout;

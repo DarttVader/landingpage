@@ -26,13 +26,13 @@ body {
 }
 
 ::-webkit-scrollbar-track:horizontal {
-  background: #FCEAD7; 
-  border-radius: 10px;
+  background: #F5E9E3; 
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
   background: #8B3A3A; 
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar {
@@ -40,11 +40,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FCEAD7;
-  border-radius: 10px;
+  background: #F5E9E3;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #8B3A3A;
-  border-radius: 10px;
+  border-radius: 3px;
 }
