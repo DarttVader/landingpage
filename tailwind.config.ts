@@ -8,11 +8,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["var(--inter-regular)"],
+        poppins: ["var(--poppins-regular)"],
         lora: ["var(--lora-regular)"],
+        playfair: ["var(--playfair-extrabold-italic)"],
       },
       screens: {
-        "max-1170": { max: "1170px"},
+        "max-1170": { max: "1170px" },
       },
     },
   },
