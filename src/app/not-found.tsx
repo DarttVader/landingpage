@@ -1,11 +1,5 @@
 import { Metadata } from "next";
-import Inter from "next/font/local";
 import Link from "next/link";
-
-const FontInter = Inter({
-  src: "../fonts/Inter/static/Inter_18pt-Regular.ttf",
-  variable: "--inter-regular",
-});
 
 export const metadata: Metadata = {
   title: "404 | Rafaela Mazieiro",
@@ -20,21 +14,38 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "404 | Rafaela Mazieiro",
-    description: "Site não encontrado, por favor volte para página inicial"
+    description: "Site não encontrado, por favor volte para página inicial",
   },
 };
 
 const NotFound = () => {
+
   return (
-    <div className={`${FontInter.variable}font-inter flex flex-col justify-center bg-[url(/fundo.jpg)] bg-cover bg-center items-center h-screen w-screen`}>
-      <h1 className="text-3xl text-center bg-gradient-to-b from-[#8d1e1e]/90 to-[#c01e1e]/80 text-transparent bg-clip-text">Página não encontrada. Tente aqui para  
-        <br />ir para página principal:</h1>
-        <br /><button className="mt-1 rounded-md hover:from-[#8d1e1e]/70 hover:to-[#c01e1e]/70 bg-gradient-to-r from-[#8d1e1e]/90 to-[#c01e1e]/80 
-          hover:bg-opacity-50 content-center transition-all duration-200">
-        <Link href="/" className="text-2xl text-slate-200 hover:text-white/50 hover:drop-shadow-[0_0_4px_#c01e1e] 
-          transition-all duration-200 text-center p-2 block h-full w-full rounded-lg">Página inicial</Link>
-      </button>
-    </div>                                                             
+<div className="relative overflow-hidden flex flex-col justify-center items-center 
+  min-h-full min-w-full bg-cover bg-center px-1 flex-grow">
+
+  {/* Pseudo-elemento para opacidade no background */}
+  <div className="absolute inset-0 bg-[url(/fundo.jpg)] bg-cover bg-center opacity-90"></div>
+
+  {/* Conteúdo acima do background */}
+  <h1 className="relative text-3xl font-playfair text-center max-540:text-xl 
+    bg-gradient-to-b from-[#8d1e1e]/90 drop-shadow-2xl to-[#c01e1e]/80 text-transparent bg-clip-text">
+    Página não encontrada. Tente aqui para  
+    <br />ir para página principal:
+  </h1>
+
+  <button className="relative mt-4 rounded-md bg-gradient-to-r from-[#8d1e1e]/90 to-[#c01e1e]/80 
+    hover:from-[#8d1e1e]/70 hover:to-[#c01e1e]/70 shadow-2xl transition-all duration-200">
+    
+    <Link href="/" className="text-2xl font-lora text-slate-200 max-540:text-lg hover:text-white/50 
+      hover:drop-shadow-[0_0_4px_#c01e1e] transition-all duration-200 
+      text-center p-2 block h-full w-full rounded-lg">
+      Página inicial
+    </Link>
+
+  </button>  
+</div>
+                                                     
   );
 };
 

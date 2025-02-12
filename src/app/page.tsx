@@ -1,6 +1,5 @@
 import { NavBar, SectionHome } from "@/exports";
 import { Metadata } from "next";
-import Poppins from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Home | Rafaela Mazieiro",
@@ -14,20 +13,15 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Home | Rafaela Mazieiro",
-    description: "Site criado por Fabio Ghizoni, com muito amor e carinho"
+    description: "Site criado por Fabio Ghizoni, com muito amor e carinho",
   },
 };
-
-const FontPoppins = Poppins({
-  src: "../fonts/Poppins/Poppins-SemiBold.ttf",
-  variable: "--poppins-regular",
-  weight: "500",
-});
 
 const Home = () => {
 
   return (
-    <main className={`${FontPoppins.variable} font-poppins h-screen w-full`}>
+    <main className="flex items-center flex-col overflow-hidden 
+      justify-center mx-auto">
       <NavBar />
       <SectionHome />
     </main>

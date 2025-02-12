@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
 }
 
 ::-webkit-scrollbar:horizontal {

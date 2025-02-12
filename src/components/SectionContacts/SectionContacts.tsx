@@ -1,6 +1,6 @@
 const SectionEnd = () => {
   return (
-    <section className="border-2 bg-white">
+    <section className="border-2">
       <div>
         <h1 className="text-center">Contatos</h1>
       </div>
