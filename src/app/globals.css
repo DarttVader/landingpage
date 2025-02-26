@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  html,
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track:horizontal {
+    background: #ffe0e0;
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal {
+    background: #8b3a3a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #ffe0e0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #8b3a3a;
+  }
+}

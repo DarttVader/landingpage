@@ -1,0 +1,16 @@
+export { default as CopyRight } from "@/components/CopyRight/CopyRight";
+export { default as LeafletMap } from "@/components/LeafletMap/LeafletMap";
+export { default as NavBar } from "@/components/NavBar/NavBar";
+export { default as Logo } from "@/components/NavBar/Ui/Logo";
+export { default as MenuClose } from "@/components/NavBar/Ui/MenuClose";
+export { default as MenuOpen } from "@/components/NavBar/Ui/MenuOpen";
+export { default as Section1 } from "@/components/Section1/Section1";
+export { default as ImageRafa } from "@/components/Section1/Ui/ImageRafa";
+export { default as TextSection1 } from "@/components/Section1/Ui/TextSection1";
+export { default as Section2 } from "@/components/Section2/Section2";
+export { default as TextSection2 } from "@/components/Section2/Ui/TextSection2";
+export { default as Section3 } from "@/components/Section3/Section3";
+export { default as Contacts } from "@/components/Section3/Ui/Contacts";
+export { default as AnimatedCards } from "@/components/Section2/Ui/AnimatedCards";
+export { default as GridCards } from "@/components/Section2/Ui/GridCards";
+export { default as FooterFAQ } from "@/components/CopyRight/Ui/FooterFAQ";
