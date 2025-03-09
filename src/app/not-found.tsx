@@ -28,33 +28,22 @@ export const metadata: Metadata = {
 
 const NotFound = () => {
   return (
-    <div
-      className="relative overflow-hidden flex flex-col justify-center items-center 
-  min-h-full min-w-full w-screen h-screen bg-cover bg-center bg-fundo px-1 flex-grow"
-    >
-      {/* Conteúdo acima do background */}
-      <h1
-        className="relative text-3xl font-playfair text-center max-540:text-xl 
-    bg-gradient-to-b from-red-1/90 drop-shadow-2xl to-red-2/80 text-transparent bg-clip-text"
-      >
-        Página não encontrada. Tente aqui para
-        <br />
-        ir para página principal:
+    <div className="relative overflow-hidden flex flex-col justify-center items-center 
+      min-h-full min-w-full w-screen h-screen bg-cover bg-center bg-fundo px-1 flex-grow">
+      <h1 className="relative text-7xl text-center bg-gradient-to-r from-red-1 
+        drop-shadow-2xl to-red-2 text-transparent bg-clip-text">
+        404
       </h1>
-
-      <button
-        className="relative mt-4 rounded-md bg-gradient-to-r from-red-1/90 to-red-2/80 
-    hover:from-red-1/70 hover:to-red-2/70 shadow-2xl transition-all duration-200"
-      >
-        <Link
-          href="/"
-          className="text-2xl font-lora text-slate-200 max-540:text-lg hover:text-white/50 
-      hover:drop-shadow-shadowcustom transition-all duration-200 
-      text-center p-2 block h-full w-full rounded-lg"
-        >
-          Página inicial
+      <h2 className="text-3xl text-center text-red-escuro">
+        PÁGINA NÃO ENCONTRADA. <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-wine-950 via-red-wine 
+          to-red-400">Tente{" "}
+        </span>
+        <Link href="/" className="text-center h-full w-full rounded-lg bg-gradient-to-r from-red-1 
+          drop-shadow-2xl to-red-2 text-transparent bg-clip-text contrast-200 hover:opacity-60">
+          aqui
         </Link>
-      </button>
+      </h2>
     </div>
   );
 };

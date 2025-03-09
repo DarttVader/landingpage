@@ -14,25 +14,22 @@ const MenuClose: React.FC<CloseMenuProps> = ({ isOpen, toggleMenu }) => {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.25, ease: easeInOut, type: keyframes }}
       onClick={toggleMenu}
-      className={`
-    flex flex-col group mr-4 self-center py-2 px-1 cursor-pointer transition-all duration-300 ease-in-out justify-between w-[52px] h-[52px] 
-    ${isOpen ? `fixed right-0 z-[3]` : `relative`}
-  `}
-    >
-      <div
-        className={`${isOpen ? "" : ""
-          } h-[3px] w-full bg-red-wine transform rounded-xl transition-transform ease-in-out duration-300 group-hover:-rotate-45 group-hover:translate-y-[16.2px]`}
-      ></div>
+      className={`flex flex-col group mr-1 self-center py-2 px-1 cursor-pointer transition-all duration-300 
+        ease-in-out justify-between rounded-md items-center ${isOpen ? `fixed right-0 z-3 w-6 h-6` : `relative w-8 h-8`}`}>
 
-      <div
-        className={`${isOpen ? "group-hover:hidden " : ""
-          } h-[3px] w-full bg-red-wine rounded-xl transition-opacity duration-300 ease-in-out group-hover:opacity-0`}
-      ></div>
+      <motion.div
+        className={`${isOpen ? "bg-bege-rose w-11/12" : "bg-fugente w-full"} h-0.1 transform rounded-xl group-hover:brightness-150`}
+        transition={{ duration: 0.3, ease: easeInOut, type: keyframes }}
+        animate={{ rotate: isOpen ? 45 : 0, translateY: isOpen ? 3.5 : 0, }} />
 
-      <div
-        className={`${isOpen ? "" : ""
-          } h-[3px] w-full bg-red-wine transform rounded-xl transition-transform ease-in-out duration-300 group-hover:rotate-45 group-hover:-translate-y-[16.2px]`}
-      ></div>
+      <motion.div
+        className={`${isOpen ? "group-hover:hidden bg-bege-rose" : "bg-fugente w-full"} h-0.1 rounded-xl group-hover:brightness-150`}
+        animate={{ opacity: isOpen ? 0 : 1, }} />
+
+      <motion.div
+        className={`${isOpen ? "bg-bege-rose w-11/12" : "bg-fugente w-full"} h-0.1 transform rounded-xl group-hover:brightness-150`}
+        transition={{ duration: 0.3, ease: easeInOut, type: keyframes }}
+        animate={{ rotate: isOpen ? -45 : 0, translateY: isOpen ? -3.5 : 0, }} />
     </motion.div>
   );
 };

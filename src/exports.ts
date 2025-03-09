@@ -14,3 +14,4 @@ export { default as Contacts } from "@/components/Section3/Ui/Contacts";
 export { default as AnimatedCards } from "@/components/Section2/Ui/AnimatedCards";
 export { default as GridCards } from "@/components/Section2/Ui/GridCards";
 export { default as FooterFAQ } from "@/components/CopyRight/Ui/FooterFAQ";
+export { default as TopClick } from "@/components/NavBar/Ui/TopClick";

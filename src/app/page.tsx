@@ -2,9 +2,8 @@ import { CopyRight, NavBar, Section1, Section2, Section3 } from "@/exports";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | Rafaela Mazieiro",
   description:
-    "Website created by Fabio Ghizoni, with the greatest love and affection",
+    "Website created by Fabio Ghizoni, make your way silently, and in the future, you will see your success...",
   keywords: [
     "Rafaela Mazieiro",
     "Page",
@@ -21,14 +20,8 @@ export const metadata: Metadata = {
     "Site",
     "Fabio Ghizoni",
     "Softwares",
+    "Casa",
   ],
-  openGraph: {
-    title: "Home | Rafaela Mazieiro",
-    description:
-      "Site criado por Fabio Ghizoni, feito com muito amor e carinho",
-    url: process.env.BASE_URL,
-    siteName: "Rafaela Mazieiro",
-  },
 };
 
 const Home = () => {

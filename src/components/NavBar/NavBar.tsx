@@ -1,5 +1,5 @@
 "use client";
-import { Logo, MenuClose, MenuOpen } from "@/exports";
+import { Logo, MenuClose, MenuOpen, TopClick } from "@/exports";
 import { useEffect, useState } from "react";
 
 const NavBar = () => {
@@ -17,10 +17,11 @@ const NavBar = () => {
     }
   }, [isOpen]);
   return (
-    <nav className="flex fixed inset-0 justify-between z-[2] w-full h-20 min-w-[17.5rem]">
+    <nav className="flex inset-0 p-0.5 justify-between bg-bege-rose z-2 w-full min-h-10 min-w-70">
       <Logo />
       <MenuClose isOpen={isOpen} toggleMenu={toggleMenu} />
       <MenuOpen isOpen={isOpen} />
+      <TopClick />
     </nav>
   );
 };
