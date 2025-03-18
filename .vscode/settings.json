@@ -1,0 +1,10 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  }
+}

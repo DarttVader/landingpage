@@ -1,0 +1,22 @@
+export { default as CopyRight } from "@/components/CopyRight/CopyRight";
+export { default as FooterFAQ } from "@/components/CopyRight/Ui/FooterFAQ";
+export { default as NavBar } from "@/components/NavBar/NavBar";
+export { default as Logo } from "@/components/NavBar/Ui/Logo";
+export { default as MenuClose } from "@/components/NavBar/Ui/MenuClose";
+export { default as MenuOpen } from "@/components/NavBar/Ui/MenuOpen";
+export { default as TopClick } from "@/components/MainItens/Ui/TopClick";
+export { default as SectionCards } from "@/components/SectionCards/SectionCards";
+export { default as AnimatedCards } from "@/components/SectionCards/Ui/AnimatedCards";
+export { default as GridCards } from "@/components/SectionCards/Ui/GridCards";
+export { default as TextSection2 } from "@/components/SectionCards/Ui/TextSection2";
+export { default as SectionContacts } from "@/components/SectionContacts/SectionContacts";
+export { default as Contacts } from "@/components/SectionContacts/Ui/Contacts";
+export { default as LeafletMap } from "@/components/SectionContacts/Ui/LeafletMap";
+export { default as SectionMain } from "@/components/SectionMain/SectionMain";
+export { default as ImageRafa } from "@/components/SectionMain/Ui/ImageRafa";
+export { default as TextSectionMain } from "@/components/SectionMain/Ui/TextSectionMain";
+export { default as Address } from "@/components/SectionContacts/Ui/Address";
+export { default as SocialMedia } from "@/components/MainItens/Ui/SocialMedia";
+export { default as MainItens } from "@/components/MainItens/MainItens";
+export { default as SocialIcon } from "@/components/MainItens/Ui/SocialIcon";
+
