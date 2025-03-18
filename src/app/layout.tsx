@@ -1,5 +1,7 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import LogoSvg from "public/logo.svg";
 import "./globals.css";
 
 const FontPoppins = Poppins({
@@ -54,19 +56,19 @@ export const metadata: Metadata = {
   applicationName: "Next JS",
   title: "Home | Rafaela Mazieiro",
   referrer: "origin-when-cross-origin",
-  metadataBase: new URL("https://rafaelamazieiro-sooty.vercel.app/"),
+  metadataBase: new URL(process.env.BASE_URL as string),
   authors: [
-    { name: "Fábio Ghizoni", url: "https://rafaelamazieiro-sooty.vercel.app/" },
-    { name: "Rafael Leuch", url: "https://rafaelamazieiro-sooty.vercel.app/" },
+    { name: "Fábio Ghizoni", url: process.env.BASE_URL as string },
+    { name: "Rafael Leuch", url: process.env.BASE_URL as string },
   ],
   description: `Website created by Fábio Ghizoni, make your way silently, and in the future, you will see 
     your success...`,
   openGraph: {
-    images: "/logo.svg",
+    images: LogoSvg,
     countryName: "Brazil",
     siteName: "Rafaela Mazieiro",
     description: "Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos?",
-    url: "https://rafaelamazieiro-sooty.vercel.app/",
+    url: process.env.BASE_URL as string,
     title: "WebSite | Rafaela Mazieiro",
     authors: ["Fábio Ghizoni", "Rafael Leuch"],
     creators: ["Fábio Ghizoni", "Rafael Leuch"],
@@ -78,6 +80,7 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     <html lang="pt-br">
       <body className={`${FontPoppins.className} bg-bege-rose`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
