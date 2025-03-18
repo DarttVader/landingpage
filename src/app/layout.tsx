@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import LogoSvg from "public/logo.svg";
 import "./globals.css";
 
 const FontPoppins = Poppins({
@@ -55,19 +54,19 @@ export const metadata: Metadata = {
   applicationName: "Next JS",
   title: "Home | Rafaela Mazieiro",
   referrer: "origin-when-cross-origin",
-  metadataBase: new URL(process.env.BASE_URL as string),
+  metadataBase: new URL("https://rafaelamazieiro-sooty.vercel.app/"),
   authors: [
-    { name: "Fábio Ghizoni", url: process.env.BASE_URL as string },
-    { name: "Rafael Leuch", url: process.env.BASE_URL as string },
+    { name: "Fábio Ghizoni", url: "https://rafaelamazieiro-sooty.vercel.app/" },
+    { name: "Rafael Leuch", url: "https://rafaelamazieiro-sooty.vercel.app/" },
   ],
-  description: `Website created by Fabio Ghizoni, make your way silently, and in the future, you will see 
+  description: `Website created by Fábio Ghizoni, make your way silently, and in the future, you will see 
     your success...`,
   openGraph: {
-    images: LogoSvg,
+    images: "/logo.svg",
     countryName: "Brazil",
     siteName: "Rafaela Mazieiro",
     description: "Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos?",
-    url: process.env.BASE_URL as string,
+    url: "https://rafaelamazieiro-sooty.vercel.app/",
     title: "WebSite | Rafaela Mazieiro",
     authors: ["Fábio Ghizoni", "Rafael Leuch"],
     creators: ["Fábio Ghizoni", "Rafael Leuch"],
