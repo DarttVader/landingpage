@@ -91,7 +91,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="pt-br">
-      <body className={`${FontPoppins.variable} ${FontRaleway.variable} font-poppins bg-bege-rose`}>
+      <body className={`${FontPoppins.variable} ${FontRaleway.variable} font-poppins bg-bege`}>
         <Analytics />
         {children}
       </body>

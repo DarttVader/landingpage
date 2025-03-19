@@ -2,12 +2,11 @@
 import { easeInOut, keyframes, motion } from "framer-motion";
 import { FaRegHeart } from "react-icons/fa";
 
-const TextSection1 = () => {
+const TextSectionMain = () => {
   return (
     <div
-      className="flex flex-col justify-end max-1170:mb-32 lg:justify-center max-1170:absolute max-1170:order-2 
-          h-full w-65% max-1170:w-full"
-    >
+      className="flex flex-col w-65% justify-center max-1170:w-full max-1170:justify-end max-1170:mb-32 
+        max-1170:absolute max-1170:order-2 max-1170:text-center">
       <motion.h1
         initial={{ opacity: 0, x: -80 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -29,4 +28,4 @@ const TextSection1 = () => {
   );
 };
 
-export default TextSection1;
+export default TextSectionMain;

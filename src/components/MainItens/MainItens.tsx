@@ -22,7 +22,7 @@ const MainItens = () => {
       transition={Transition}
       initial={{ y: 80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="flex flex-col min-w-14 min-h-56 fixed z-1 bottom-0 left-0 mb-4 ml-4 justify-between">
+      className="flex flex-col min-w-14 min-h-56 fixed z-1 bottom-0 bg-black left-0 mb-4 ml-4 justify-between">
       <SocialMedia />
       <TopClick />
     </motion.div>

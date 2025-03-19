@@ -10,7 +10,7 @@ const AnimatedCards = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: easeInOut, type: keyframes }}
         className="bg-slate-700 h-96 flex flex-col items-center justify-between text-white text-lg font-semibold
-          hover:h-[35rem] transition-all duration-300 ease-in-out overflow-hidden"
+          hover:h-[35rem] transition-all duration-300 ease-in-out overflow-hidden rounded-xl"
       >
         <CiImageOn size="20rem" />
         <h1 className="text-center font-bold">
@@ -25,7 +25,7 @@ const AnimatedCards = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: easeInOut, type: keyframes }}
         className="bg-slate-700 h-96 flex flex-col items-center justify-center text-white text-lg font-semibold
-          hover:h-[35rem] transition-all duration-300 ease-in-out overflow-hidden"
+          hover:h-[35rem] transition-all duration-300 ease-in-out overflow-hidden rounded-xl"
       >
         <CiImageOn size="20rem" />
         <h1 className="text-center font-bold">
@@ -40,7 +40,7 @@ const AnimatedCards = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: easeInOut, type: keyframes }}
         className="bg-slate-700 h-96 flex flex-col items-center justify-between text-white text-lg font-semibold
-          hover:h-[35rem] transition-all duration-300 ease-in-out overflow-hidden"
+          hover:h-[35rem] transition-all duration-300 ease-in-out overflow-hidden rounded-xl"
       >
         <CiImageOn size="20rem" />
         <h1 className="text-center font-bold">
@@ -55,7 +55,7 @@ const AnimatedCards = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: easeInOut, type: keyframes }}
         className="bg-slate-700 h-96 flex flex-col items-center justify-between text-white text-lg font-semibold
-          hover:h-[35rem] transition-all duration-300 ease-in-out overflow-hidden"
+          hover:h-[35rem] transition-all duration-300 ease-in-out overflow-hidden rounded-xl"
       >
         <CiImageOn size="20rem" />
         <h1 className="text-center font-bold">

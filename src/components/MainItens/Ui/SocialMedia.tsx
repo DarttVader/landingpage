@@ -27,8 +27,8 @@ const SocialMedia = React.memo(() => {
             <div className={`absolute h-full w-full rounded-full bg-custom-conic animate-spin-slow blur-min 
               p-1`} />
             {/* Ícone central */}
-            <div className={`absolute flex p-1 rounded-full bg-custom-radial`}>
-              <Social.Icon color="#B5847D" size="2rem" />
+            <div className={`absolute flex p-1 rounded-full bg-rosa-claro`}>
+              <Social.Icon color="white" size="2rem" />
             </div>
           </div>
         </a>

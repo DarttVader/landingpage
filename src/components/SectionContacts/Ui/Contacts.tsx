@@ -26,15 +26,15 @@ const Contacts = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: easeInOut, type: keyframes }}
       className="text-3xl bg-gradient-to-r text-transparent self-start mt-5 brightness-125 contrast-125 
-        bg-clip-text from-red-wine to-red-wine-950"
+        bg-clip-text from-vinho-normal to-vinho-escuro2"
     >
       Contatos:
       {contacts.map((contact, index) => (
-        <p key={index} className="text-xl text-black flex items-center">
+        <p key={index} className="text-xl text-vinho-escuro2 flex items-center">
           {contact.number}
           <FaRegCopy
             onClick={() => CopyToClipboard(contact.number)} // Chama o alert após copiar
-            className="text-cinza-escuro hover:opacity-50 hover:rotate-6 ml-2 cursor-pointer"
+            className="text-vinho-escuro hover:opacity-50 hover:rotate-6 ml-2 cursor-pointer"
           />
           {contact.location}
         </p>

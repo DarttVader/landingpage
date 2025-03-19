@@ -28,6 +28,8 @@ export default {
         70: "17.5rem",
       },
       width: {
+        image: "43.75rem",
+        maximg: "26.938rem",
         border: "2.8rem",
         "44px": "2.75rem",
         "52px": "3.25rem",
@@ -41,32 +43,35 @@ export default {
         "44px": "2.75rem",
         "52px": "3.25rem",
       },
-      translate: {
-        "-full": "-100rem", //Usado no menu hamburguer(NavBar.tsx)
-      },
       padding: {
         18: "4.5rem",
         min: "0.18rem",
       },
       colors: {
-        "red-1": "#8d1e1e",
-        "red-2": "#c01e1e",
-        "red-wine": "#8B3A3A",
-        "red-wine-950": "#362929",
-        "bege-rose": "#FFE0E0",
+        vermelho: {
+          normal: "#c01e1e", //Gradientes de texto not-found.tsx
+          escuro: "#8d1e1e", //Gradientes de texto not-found.tsx
+          escuro2: "#622525", //Gradientes de texto not-found.tsx
+        },
+        vinho: {
+          normal: "#8B3A3A", //Gradientes de texto not-found.tsx
+          escuro: "#513D3D#",
+          escuro2: "#362929",  //Gradientes de texto not-found.tsx
+        },
+        bege: "#FFE0E0", //Layout.tsx
+        fugente: "#B5847D",
         "cinza-claro": "#C5ADA0",
         "cinza-escuro": "#222222",
         "marrom-claro": "#9B7664",
         "marrom-escuro": "#704936",
         "custom": "#8B5E3C",
         "marrom-preto": "#362321",
-        "fugente": "#B5847D",
         "rosa-claro": "#B56576",
-        "red-escuro": "#622525",
       },
       screens: {
-        "max-1170": { max: "1170px" },
-        "max-540": { max: "540px" },
+        "max-1170": { max: "1170px", },
+        "min-1170": { min: "1170px", },
+        "max-540": { max: "540px", },
       },
       animation: {
         "spin-slow": "spin 5s linear infinite", //Animação circular loop

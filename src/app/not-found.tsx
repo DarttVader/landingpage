@@ -22,17 +22,17 @@ const Custom404 = () => {
   return (
     <div className="relative overflow-hidden flex flex-col justify-center items-center 
       min-h-full min-w-full w-screen h-screen bg-cover bg-center bg-fundo px-1 flex-grow">
-      <h1 className="relative text-7xl text-center bg-gradient-to-r from-red-1 
-        drop-shadow-2xl to-red-2 text-transparent bg-clip-text">
+      <h1 className="relative text-7xl text-center bg-gradient-to-r from-vermelho-escuro 
+        drop-shadow-2xl to-vermelho-normal text-transparent bg-clip-text">
         404
       </h1>
-      <h2 className="text-3xl text-center text-red-escuro">
+      <h2 className="text-3xl text-center text-vermelho-escuro">
         PÁGINA NÃO ENCONTRADA. <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-wine-950 via-red-wine 
-          to-red-400">Tente{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-vinho-escuro via-vinho-normal 
+          to-vermelho-normal">Tente{" "}
         </span>
-        <Link href="/" className="text-center h-full w-full rounded-lg bg-gradient-to-r from-red-1 
-          drop-shadow-2xl to-red-2 text-transparent bg-clip-text contrast-200 hover:opacity-60">
+        <Link href="/" className="text-center h-full w-full rounded-lg bg-gradient-to-r from-vermelho-escuro 
+          drop-shadow-2xl to-vermelho-normal text-transparent bg-clip-text contrast-200 hover:opacity-60">
           aqui
         </Link>
       </h2>

@@ -1,7 +1,7 @@
 "use client";
 import { easeInOut, keyframes, motion } from "framer-motion";
 
-const TextSection2 = () => {
+const TextSectionCards = () => {
   return (
     <motion.h1
       initial={{ opacity: 0, scale: 0, rotate: 5 }}
@@ -14,4 +14,4 @@ const TextSection2 = () => {
   );
 };
 
-export default TextSection2;
+export default TextSectionCards;

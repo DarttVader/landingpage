@@ -10,7 +10,7 @@ export { default as MenuOpen } from "@/components/NavBar/Ui/MenuOpen";
 export { default as SectionCards } from "@/components/SectionCards/SectionCards";
 export { default as AnimatedCards } from "@/components/SectionCards/Ui/AnimatedCards";
 export { default as GridCards } from "@/components/SectionCards/Ui/GridCards";
-export { default as TextSection2 } from "@/components/SectionCards/Ui/TextSection2";
+export { default as TextSectionCards } from "@/components/SectionCards/Ui/TextSectionCards";
 export { default as SectionContacts } from "@/components/SectionContacts/SectionContacts";
 export { default as Address } from "@/components/SectionContacts/Ui/Address";
 export { default as Contacts } from "@/components/SectionContacts/Ui/Contacts";
