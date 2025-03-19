@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Raleway } from "next/font/google";
 import LogoSvg from "public/logo.svg";
 import "./globals.css";
 
@@ -10,6 +10,16 @@ const FontPoppins = Poppins({
   preload: true,
   style: ["normal", "italic"],
   display: "auto",
+  variable: "--poppins",
+});
+
+const FontRaleway = Raleway({
+  subsets: ["latin", "latin-ext", "vietnamese", "cyrillic", "cyrillic-ext"],
+  weight: ["400", "500", "600"],
+  preload: true,
+  style: ["normal", "italic"],
+  display: "auto",
+  variable: "--raleway"
 });
 
 export const metadata: Metadata = {
@@ -54,33 +64,36 @@ export const metadata: Metadata = {
   creator: "Fábio Ghizoni",
   publisher: "Fábio Ghizoni",
   applicationName: "Next JS",
-  title: "Home | Rafaela Mazieiro",
   referrer: "origin-when-cross-origin",
-  metadataBase: new URL(process.env.BASE_URL as string),
+  metadataBase: new URL("https://rafaelamazieiro.vercel.app"),
   authors: [
-    { name: "Fábio Ghizoni", url: process.env.BASE_URL as string },
-    { name: "Rafael Leuch", url: process.env.BASE_URL as string },
+    { name: "Fábio Ghizoni", url: "https://www.instagram.com/fabio.ghizoni_" },
+    { name: "Rafael Leuch", url: "https://www.instagram.com/leuch_raf" },
   ],
-  description: `Website created by Fábio Ghizoni, make your way silently, and in the future, you will see 
-    your success...`,
   openGraph: {
     images: LogoSvg,
     countryName: "Brazil",
     siteName: "Rafaela Mazieiro",
     description: "Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos?",
-    url: process.env.BASE_URL as string,
+    url: "https://rafaelamazieiro.vercel.app",
     title: "WebSite | Rafaela Mazieiro",
     authors: ["Fábio Ghizoni", "Rafael Leuch"],
     creators: ["Fábio Ghizoni", "Rafael Leuch"],
+  },
+  appleWebApp: {
+    title: "Rafaela Mazieiro",
+    startupImage: typeof LogoSvg,
+    statusBarStyle: "black-translucent",
+    capable: true,
   },
 };
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="pt-br">
-      <body className={`${FontPoppins.className} bg-bege-rose`}>
-        {children}
+      <body className={`${FontPoppins.variable} ${FontRaleway.variable} font-poppins bg-bege-rose`}>
         <Analytics />
+        {children}
       </body>
     </html>
   );

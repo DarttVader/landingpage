@@ -18,7 +18,7 @@
   }
 
   ::-webkit-scrollbar-thumb:horizontal {
-    background: #8b3a3a;
+    background: #b56576;
   }
 
   ::-webkit-scrollbar {
@@ -30,6 +30,6 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #8b3a3a;
+    background: #b56576;
   }
 }

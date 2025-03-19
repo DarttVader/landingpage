@@ -10,9 +10,10 @@ const Logo = () => {
       initial={{ opacity: 0, x: -80 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, ease: easeInOut, type: keyframes }}
-      className="w-44 h-18 relative self-center -ml-1 hover:contrast-75"
+      className="w-44 h-18 relative self-center -ml-1 group rounded-lg"
     >
-      <Link href="/" className="absolute inset-0">
+      <Link href="/" about="Logo Rafaela Mazieiro" className="absolute inset-0 group-hover:scale-105 
+        group-hover:contrast-125">
         <Image
           fill
           priority
@@ -20,7 +21,7 @@ const Logo = () => {
           quality={100}
           src={LogoSvg}
           alt="Logo de Rafaela Mazieiro"
-          className="hover:brightness-125 object-contain"
+          className="object-contain"
         />
       </Link>
     </motion.div>

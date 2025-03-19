@@ -21,11 +21,11 @@ const LeafletMap = () => {
   const { MapContainer, Marker, Popup, TileLayer } = MapComponents;
 
   return (
-    <div className="h-full w-full min-h-10 min-w-10 content-center justify-items-start">
+    <div className="h-full w-full min-h-96 min-w-96 content-center justify-items-start">
       <MapContainer
         zoom={15} keyboard={true} scrollWheelZoom={false}
         center={[-24.51735, -51.66724] as LatLngExpression}
-        className="h-full w-full border-2 border-red-wine shadow-2xl drop-shadow-2xl">
+        className="h-full w-full border-2 border-red-wine drop-shadow-2xl">
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' />

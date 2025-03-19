@@ -14,7 +14,7 @@ const FooterFAQ = () => {
         &copy; {new Date().getFullYear()}{" "}
         <Link
           className="bg-gradient-to-r text-transparent brightness-125 contrast-125 bg-clip-text from-red-wine to-rose-500"
-          href="https://www.instagram.com/fabio.ghizoni_/"
+          href="https://www.instagram.com/fabio.ghizoni_"
         >
           Fabio Ghizoni
         </Link>

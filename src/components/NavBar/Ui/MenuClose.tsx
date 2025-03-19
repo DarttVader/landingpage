@@ -1,5 +1,5 @@
 "use client";
-import { easeInOut, motion } from "framer-motion";
+import { easeInOut, keyframes, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface CloseMenuProps {
@@ -21,7 +21,7 @@ const MenuClose: React.FC<CloseMenuProps> = ({ isOpen, toggleMenu }) => {
     // Adiciona o evento quando o menu estiver aberto
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
-    }
+    };
 
     // Remove o evento ao desmontar ou quando o menu for fechado
     return () => {
@@ -35,21 +35,21 @@ const MenuClose: React.FC<CloseMenuProps> = ({ isOpen, toggleMenu }) => {
       onClick={toggleMenu}
       initial={{ opacity: 0, x: 80 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.25, ease: easeInOut }}
-      className={`flex flex-col group cursor-pointer rounded-md justify-between p-1 py-2 mr-2 self-center
-        ${isOpen ? "fixed right-0 z-3 w-8 h-8" : "relative w-11 h-11 hover:contrast-75"}`}>
+      transition={{ duration: 0.25, ease: easeInOut, type: keyframes }}
+      className={`flex flex-col cursor-pointer rounded-md justify-between p-1 py-2 mr-2 self-center
+        ${isOpen ? "fixed right-0 z-3 w-8 h-8" : "relative w-11 h-11 hover:size-12 hover:contrast-125"}`}>
       <motion.div
-        className="w-full h-0.1 bg-white rounded-3xl group-hover:brightness-150"
-        animate={{ rotate: isOpen ? 45 : 0, translateY: isOpen ? "0.45rem" : 0 }}
-        transition={{ duration: 0.3, ease: easeInOut }} />
+        transition={{ duration: 0.3, ease: easeInOut, type: keyframes }}
+        className={`h-0.1 bg-rosa-claro rounded-3xl self-end ${isOpen ? "w-full" : "w-10/12"}`}
+        animate={{ rotate: isOpen ? 45 : 0, translateY: isOpen ? "0.40rem" : 0 }} />
       <motion.div
-        className="w-full h-0.2 bg-white rounded-3xl group-hover:brightness-150"
         animate={{ opacity: isOpen ? 0 : 1 }}
-        transition={{ duration: 0.2, ease: easeInOut }} />
+        transition={{ duration: 0.2, ease: easeInOut, type: keyframes }}
+        className="w-full h-0.2 bg-rosa-claro rounded-3xl" />
       <motion.div
-        className="w-full h-0.1 bg-white rounded-3xl group-hover:brightness-150"
-        animate={{ rotate: isOpen ? -45 : 0, translateY: isOpen ? "-0.45rem" : 0 }}
-        transition={{ duration: 0.3, ease: easeInOut }} />
+        transition={{ duration: 0.3, ease: easeInOut, type: keyframes }}
+        className="w-full h-0.1 bg-rosa-claro rounded-3xl"
+        animate={{ rotate: isOpen ? -45 : 0, translateY: isOpen ? "-0.40rem" : 0 }} />
     </motion.div>
   );
 };
