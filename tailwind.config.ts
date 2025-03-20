@@ -20,22 +20,20 @@ export default {
         5: "5", //ImgRafa on ImageRafa.tsx
         6: "6", //TextSectionMain on TextSectionMain.tsx
       },
-      blur: {
-        min: "1px",
-      },
       minWidth: {
         67: "16.875rem",
         70: "17.5rem",
       },
       width: {
         image: "43.75rem",
-        maximg: "26.938rem",
+        maximg: "22rem",
         border: "2.8rem",
         "44px": "2.75rem",
         "52px": "3.25rem",
         "65%": "65%",
       },
       height: {
+        "11/12": "91.666667%",
         border: "2.8rem",
         "0.1": "0.28rem",
         "0.2": "0.3rem",
@@ -73,16 +71,9 @@ export default {
         "min-1170": { min: "1170px", },
         "max-540": { max: "540px", },
       },
-      animation: {
-        "spin-slow": "spin 5s linear infinite", //Animação circular loop
-      },
       backgroundImage: {
         fundo: "url(/fundo.jpg);", //Fundo SectionMain.tsx
         fundo1: "url(/fundo1.jpg)", //Fundo SectionCards.tsx
-        "custom-radial": `radial-gradient(circle, rgba(131,24,67,1) 0%, rgba(190,24,93,1) 50%, 
-          rgba(244,114,182,1) 100%)`, //Usado no botão TopClick(Para ir pro topo da pág)
-        "custom-conic": `conic-gradient(from 90deg at 50% 50%, rgba(190,24,93,1), 
-          #d64f87)`,   //Usado no botão TopClick(Animação de borda)
       },
     },
   },

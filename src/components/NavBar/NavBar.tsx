@@ -17,8 +17,8 @@ const NavBar = () => {
     }
   }, [isOpen]);
   return (
-    <nav id="navbar" className="flex inset-0 justify-between bg-fundo bg-center bg-cover border-b-2 
-      border-rosa-claro/70 shadow-2xl z-1 w-full min-w-70 h-24 min-h-20 overflow-hidden lg:h-20">
+    <nav className="flex inset-0 justify-between bg-fundo bg-center bg-cover border-b-2 border-rosa-claro/70
+      shadow-2xl z-1 w-full min-w-70 h-18 min-h-18 overflow-hidden ">
       <Logo />
       <MenuClose isOpen={isOpen} toggleMenu={toggleMenu} />
       <MenuOpen isOpen={isOpen} />

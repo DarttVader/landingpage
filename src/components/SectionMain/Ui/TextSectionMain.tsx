@@ -14,7 +14,7 @@ const TextSectionMain = () => {
         className="text-4xl lg:text-5xl text-center lg:text-start z-6 text-black w-full"
       >
         Realçando oque há de melhor em você
-        <FaRegHeart />
+        <FaRegHeart color="#B56576" className="hover:scale-105 hover:contrast-125" />
       </motion.h1>
       <motion.h2
         className="lg:text-3xl lg:text-start text-center z-6">
