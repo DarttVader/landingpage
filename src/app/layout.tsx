@@ -1,4 +1,5 @@
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
 import { Poppins, Raleway } from "next/font/google";
 import LogoSvg from "public/logo.svg";
@@ -92,8 +93,9 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="pt-br">
       <body className={`${FontPoppins.variable} ${FontRaleway.variable} font-poppins bg-bege`}>
-        <Analytics />
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
