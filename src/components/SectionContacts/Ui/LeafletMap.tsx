@@ -21,7 +21,7 @@ const LeafletMap = () => {
   const { MapContainer, Marker, Popup, TileLayer } = MapComponents;
 
   return (
-    <div className="h-full w-full min-h-96 min-w-96 content-center justify-items-start">
+    <div className="w-11/12 h-auto max-1170:h-80">
       <MapContainer
         zoom={15} keyboard={true} scrollWheelZoom={false}
         center={[-24.51735, -51.66724] as LatLngExpression}

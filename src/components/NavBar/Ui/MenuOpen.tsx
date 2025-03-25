@@ -1,41 +1,64 @@
+"use client"
 import { easeInOut, keyframes, motion } from "framer-motion";
-import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 interface OpenMenuProps {
   isOpen: boolean;
-}
+  toggleMenu: () => void;
+};
 
-const MenuOpen: React.FC<OpenMenuProps> = ({ isOpen }) => {
+const MenuOpen: React.FC<OpenMenuProps> = ({ isOpen, toggleMenu }) => {
+
+  const menuRef = useRef<HTMLUListElement | null>(null);
+
+  useEffect(() => {
+    // Verifica se foi clicado fora do componente 
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        toggleMenu(); // Fecha o menu ao clicar fora
+      };
+    };
+    if (isOpen) {
+      // Se o menu está aberto, escuta os cliques no documento
+      document.addEventListener("mousedown", handleClickOutside);
+    };
+    return () => {
+      // Remove a escuta de evento ao desmontar o componente ou quando o menu fechar
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  // Se o menu não estiver aberto, não renderiza nada
   if (!isOpen) return null;
+
   return (
-    <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="bg-black/40 inset-0 fixed z-1"
-        transition={{ duration: 1, ease: easeInOut, type: keyframes }} />
-      <motion.ul
-        className={`${isOpen
-          ? `text-bege-rose text-2xl bg-cinza-claro fixed pt-18 h-screen rounded-l-xl 
-          top-0 right-0 text-center flex flex-col justify-start w-56 z-2`
-          : `hidden`
-          }`}
-        initial={{ x: isOpen ? 600 : 0, opacity: isOpen ? 0 : 1 }}
-        animate={{ x: isOpen ? 0 : 600, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 1, ease: easeInOut, type: keyframes, }}
-      >
-        <Link href="#" className="hover:brightness-150 py-2">
-          Inicio
-        </Link>
-        <Link href="/About" className="hover:brightness-150 py-2">
+    <motion.ul
+      ref={menuRef} // Referencia
+      exit={{ x: 600, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      initial={{ x: 600, opacity: 0 }}
+      transition={{ duration: 1, ease: easeInOut, type: keyframes }}
+      className="flex flex-col fixed w-56 h-screen text-2xl bg-cinza-claro pt-18 rounded-l-xl top-0 z-9 
+      right-0 text-center justify-start">
+      <li>
+        <a href="#" className="hover:brightness-150 py-2" >
+          Início
+        </a>
+      </li>
+      <li>
+        <a href="/About" className="hover:brightness-150 py-2">
           Sobre Mim
-        </Link>
-        <Link href="/Contacts" className="hover:brightness-150 py-2">
+        </a>
+      </li>
+      <li>
+        <a href="/Contacts" className="hover:brightness-150 py-2">
           Contatos
-        </Link>
-      </motion.ul>
-    </>
+        </a>
+      </li>
+    </motion.ul>
   );
 };
 
 export default MenuOpen;
+
+

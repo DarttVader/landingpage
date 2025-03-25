@@ -28,7 +28,7 @@ const Custom404 = () => {
       </h1>
       <h2 className="text-3xl text-center text-vermelho-escuro">
         PÁGINA NÃO ENCONTRADA. <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-vinho-escuro via-vinho-normal 
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-vinho-escuro2 via-vinho-normal 
           to-vermelho-normal">Tente{" "}
         </span>
         <Link href="/" className="text-center h-full w-full rounded-lg bg-gradient-to-r from-vermelho-escuro 

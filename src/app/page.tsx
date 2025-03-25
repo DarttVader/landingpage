@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <main className="flex items-center flex-col overflow-hidden justify-center w-full h-auto mx-auto">
+    <main className="flex flex-col w-full h-auto mx-auto items-center overflow-hidden justify-center">
       <NavBar />
       <MainItens />
       <SectionMain />

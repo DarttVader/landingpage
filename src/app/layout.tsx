@@ -1,17 +1,17 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
-import { Poppins, Raleway } from "next/font/google";
+import { Playfair_Display, Raleway } from "next/font/google";
 import LogoSvg from "public/logo.svg";
 import "./globals.css";
 
-const FontPoppins = Poppins({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600"],
+const FontDisplay = Playfair_Display({
+  weight: "900",
   preload: true,
-  style: ["normal", "italic"],
+  style: "italic",
   display: "auto",
-  variable: "--poppins",
+  variable: "--display",
+  subsets: ["latin", "latin-ext", "vietnamese", "cyrillic"],
 });
 
 const FontRaleway = Raleway({
@@ -75,24 +75,24 @@ export const metadata: Metadata = {
     images: LogoSvg,
     countryName: "Brazil",
     siteName: "Rafaela Mazieiro",
-    description: "Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos?",
-    url: "https://rafaelamazieiro.vercel.app",
     title: "WebSite | Rafaela Mazieiro",
+    url: "https://rafaelamazieiro.vercel.app",
     authors: ["Fábio Ghizoni", "Rafael Leuch"],
     creators: ["Fábio Ghizoni", "Rafael Leuch"],
+    description: "Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos?",
   },
   appleWebApp: {
+    capable: true,
     title: "Rafaela Mazieiro",
     startupImage: typeof LogoSvg,
     statusBarStyle: "black-translucent",
-    capable: true,
   },
 };
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="pt-br">
-      <body className={`${FontPoppins.variable} ${FontRaleway.variable} font-poppins bg-bege`}>
+      <body className={`${FontRaleway.className} ${FontDisplay.variable} bg-bege`}>
         {children}
         <SpeedInsights />
         <Analytics />

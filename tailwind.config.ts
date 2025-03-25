@@ -8,17 +8,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        raleway: "var(--raleway)",
-        poppins: "var(--poppins)",
+        display: "var(--display)", // Fonte principal maior( H1, H2 )
+        raleway: "var(--raleway)", // Fonte principal menor( H3, H4 )
       },
       zIndex: {
-        /*z-0: */ //SectionMain on SectionMain.tsx and Home on page.tsx
-        1: "1", //NavBar on NavBar.tsx
-        2: "2", //MenuOpen on MenuOpen.tsx
-        3: "3", //MenuClose on MenuClose.tsx
-        4: "4", //Blur ImgRafa on ImageRafa.tsx
-        5: "5", //ImgRafa on ImageRafa.tsx
-        6: "6", //TextSectionMain on TextSectionMain.tsx
+        1: "1",
+        2: "2",
+        3: "3",
+        4: "4",
+        5: "5",
+        6: "6",
+        7: "7",
+        8: "8",
       },
       minWidth: {
         67: "16.875rem",
@@ -26,7 +27,7 @@ export default {
       },
       width: {
         image: "43.75rem",
-        maximg: "22rem",
+        maximg: "26.688rem",
         border: "2.8rem",
         "44px": "2.75rem",
         "52px": "3.25rem",
@@ -35,6 +36,7 @@ export default {
       height: {
         "11/12": "91.666667%",
         border: "2.8rem",
+        img: "40rem",
         "0.1": "0.28rem",
         "0.2": "0.3rem",
         "18": "4.5rem",

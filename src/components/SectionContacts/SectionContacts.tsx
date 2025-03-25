@@ -20,7 +20,7 @@ const AllContacts = ({ children }: AllContactsProps) => {
     <motion.div
       initial={{ opacity: 0, y: -40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      className="h-full w-full flex flex-col min-w-64 min-h-64"
+      className="h-11/12 w-11/12 flex flex-col"
       transition={{ duration: 0.3, ease: easeInOut, type: keyframes }}>
       {children}
     </motion.div>
@@ -33,8 +33,8 @@ const SectionContacts = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, ease: easeInOut, type: keyframes }}
-      className="w-screen h-screen flex flex-col p-5 py-10 md:p-10 md:py-16 lg:flex-row min-w-67
-        overflow-hidden">
+      className="w-full h-screen flex flex-row space-x-2 px-28 py-20 z-2 max-1170:w-auto max-1170:flex-col 
+        max-1170:space-y-2 max-1170:items-end">
       <AllContacts>
         <Address />
         <Contacts />
