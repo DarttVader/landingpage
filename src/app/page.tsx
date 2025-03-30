@@ -47,8 +47,10 @@ const Home = () => {
     <main className="flex flex-col w-full h-auto mx-auto items-center overflow-hidden justify-center">
       <NavBar />
       <MainItens />
-      <SectionMain />
-      <SectionCards />
+      <div className="flex flex-col bg-fundo1 bg-center bg-contain space-y-10 px-20 pt-10">
+        <SectionMain />
+        <SectionCards />
+      </div>
       <SectionContacts />
       <CopyRight />
     </main>

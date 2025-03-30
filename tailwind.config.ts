@@ -2,8 +2,9 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/ui/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -31,7 +32,8 @@ export default {
         border: "2.8rem",
         "44px": "2.75rem",
         "52px": "3.25rem",
-        "65%": "65%",
+        "60%": "60%",
+        "40%": "40%",
       },
       height: {
         "11/12": "91.666667%",
@@ -55,7 +57,7 @@ export default {
         },
         vinho: {
           normal: "#8B3A3A", //Gradientes de texto not-found.tsx
-          escuro: "#513D3D#",
+          escuro: "#513D3D",
           escuro2: "#362929",  //Gradientes de texto not-found.tsx
         },
         bege: "#FFE0E0", //Layout.tsx
@@ -76,6 +78,7 @@ export default {
       backgroundImage: {
         fundo: "url(/fundo.jpg);", //Fundo SectionMain.tsx
         fundo1: "url(/fundo1.jpg)", //Fundo SectionCards.tsx
+        fundo2: "url(/fundo2.avif)",
       },
     },
   },

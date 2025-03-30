@@ -1,10 +1,10 @@
-import { ImageRafa, TextSectionMain } from "@/exports";
+import { ImageRafa, TextMain } from "@/exports";
 
 const SectionMain = () => {
   return (
-    <section className="flex flex-row bg-fundo bg-cover bg-center w-screen h-screen shadow-2xl drop-shadow-xl
-      px-28 justify-center items-center overflow-hidden min-h-screen z-4 relative max-1170:flex-col">
-      <TextSectionMain />
+    <section className="flex flex-row w-full h-screen justify-center items-center max-1170:flex-col 
+      max-1170:px-4 max-1170:py-4">
+      <TextMain />
       <ImageRafa />
     </section>
   );
