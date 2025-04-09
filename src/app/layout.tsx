@@ -82,8 +82,10 @@ export const metadata: Metadata = {
     creators: ["Fábio Ghizoni", "Rafael Leuch"],
     description: "Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos?",
   },
-  description: `Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos? Venha para
-    nosso site para ver nossos tratamentos ou agende uma consulta.`,
+  description: `Sua pele merece mais do que promessas, merece resultados! Aqui, você encontra os melhores 
+    tratamentos e consultas dermatológicas para cuidar da saúde e beleza da sua pele. Nossos tratamentos
+    contam com flacidez da pele e do tecido subcutâneo, rastreamento do câncer de pele, tratamento da 
+    foliculite, cauterização dos acrocórdons, entre outros tratamentos`,
   appleWebApp: {
     capable: true,
     title: "Rafaela Mazieiro",

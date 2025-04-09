@@ -2,10 +2,7 @@ import { CopyRight, MainItens, MenuManager, SectionCards, SectionContacts } from
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Dra Rafaela Mazieiro`,
-  description: `Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos? Venha para
-    nosso site para ver nossos tratamentos ou agende uma consulta. Site criado por Fabio Ghizoni, 
-    siga seu caminho silenciosamente e, no futuro, você verá seu sucesso..`,
+  title: `Home | Dra Rafaela Mazieiro`,
   keywords: [
     "Rafaela Mazieiro",
     "Page",
