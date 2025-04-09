@@ -3,7 +3,7 @@ import { Loader } from "@googlemaps/js-api-loader";
 import React, { useEffect } from "react";
 
 const Map = () => {
-  const ApiKey = process.env.NEXT_PUBLIC_API_KEY;
+  const ApiKey = process.env.API_KEY;
   const mapRef = React.useRef<HTMLDivElement>(null);
   useEffect(() => {
     const initMap = async () => {
