@@ -1,4 +1,4 @@
-"use client"
+import { spanHandleClick } from "@/exports";
 import { easeInOut, keyframes, motion } from "framer-motion";
 
 interface CloseMenuProps {
@@ -6,16 +6,21 @@ interface CloseMenuProps {
   toggleMenu: () => void;
 };
 
-const MenuClose: React.FC<CloseMenuProps> = ({ isOpen, toggleMenu }) => {
+const MenuClose: React.FC<CloseMenuProps> = ({ isOpen, toggleMenu, }) => {
+  // Modificar a função toggleMenu para rolar para o topo antes de abrir o menu
+  const handleToggleMenu = () => {
+    spanHandleClick();
+    toggleMenu(); // Alterna o estado do menu
+  };
   return (
     <motion.div
-      onClick={toggleMenu} // Aciona o click
+      onClick={handleToggleMenu} // Aciona o click
       initial={{ opacity: 0, x: 80 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.25, ease: easeInOut, type: keyframes }}
       className={`flex flex-col cursor-pointer rounded-md justify-between p-1 py-2 mr-2 self-center shadow-2xl
-        drop-shadow-2xl relative hover:contrast-125 ${isOpen ? `fixed w-8 h-8 z-50 hover:bg-black/30`
-          : `w-11 h-11 hover:size-12`}`}
+        drop-shadow-2xl relative hover:contrast-125 
+        ${isOpen ? `w-8 h-8 z-50 hover:bg-black/30 mb-4` : `w-11 h-11 hover:size-12`}`}
     >
       <motion.div
         transition={{ duration: 0.3, ease: easeInOut, type: keyframes }}

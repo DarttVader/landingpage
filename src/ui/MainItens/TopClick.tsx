@@ -1,14 +1,15 @@
-"use client"
+"use client";
+import { scrollToTop } from "@/exports";
 import { easeInOut, keyframes, motion } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa6";
 
-const Transition = { duration: 0.5, ease: easeInOut, type: keyframes };
+const Transition = {
+  duration: 0.5,
+  ease: easeInOut,
+  type: keyframes
+};
 
 const TopClick = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <motion.div
       transition={Transition}

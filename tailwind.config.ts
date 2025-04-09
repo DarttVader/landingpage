@@ -25,6 +25,10 @@ export default {
       minWidth: {
         67: "16.875rem",
         70: "17.5rem",
+        100: "27rem",
+      },
+      maxWidth: {
+        100: "27rem",
       },
       width: {
         image: "43.75rem",
@@ -62,7 +66,7 @@ export default {
         },
         bege: "#FFE0E0", //Layout.tsx
         fugente: "#B5847D",
-        "cinza-claro": "#C5ADA0",
+        "cinza-claro": "#D6C6BD",
         "cinza-escuro": "#222222",
         "marrom-claro": "#9B7664",
         "marrom-escuro": "#704936",
@@ -77,8 +81,7 @@ export default {
       },
       backgroundImage: {
         fundo: "url(/fundo.jpg);", //Fundo SectionMain.tsx
-        fundo1: "url(/fundo1.jpg)", //Fundo SectionCards.tsx
-        fundo2: "url(/fundo2.avif)",
+        fundo1: "url(/fundo1.svg)", //Fundo SectionCards.tsx
       },
     },
   },

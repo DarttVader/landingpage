@@ -1,9 +1,11 @@
-import { CopyRight, MainItens, NavBar, SectionCards, SectionContacts, SectionMain } from "@/exports";
+import { CopyRight, MainItens, MenuManager, SectionCards, SectionContacts } from "@/exports";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  description: `Website created by Fabio Ghizoni, make your way silently, and in the future, you will see 
-    your success...`,
+  title: `Dra Rafaela Mazieiro`,
+  description: `Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos? Venha para
+    nosso site para ver nossos tratamentos ou agende uma consulta. Site criado por Fabio Ghizoni, 
+    siga seu caminho silenciosamente e, no futuro, você verá seu sucesso..`,
   keywords: [
     "Rafaela Mazieiro",
     "Page",
@@ -44,14 +46,12 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <main className="flex flex-col w-full h-auto mx-auto items-center overflow-hidden justify-center">
-      <NavBar />
-      <MainItens />
-      <div className="flex flex-col bg-fundo1 bg-center bg-contain space-y-10 px-20 pt-10">
-        <SectionMain />
-        <SectionCards />
-      </div>
+    <main className="flex flex-col space-y-0 w-full h-auto items-center overflow-hidden justify-center
+      mx-auto">
+      <MenuManager />
+      <SectionCards />
       <SectionContacts />
+      <MainItens />
       <CopyRight />
     </main>
   );

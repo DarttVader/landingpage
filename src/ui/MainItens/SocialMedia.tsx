@@ -1,18 +1,15 @@
-"use client"
+"use client";
+import { socialLinks } from "@/exports";
 import { easeInOut, keyframes, motion } from "framer-motion";
 import React from "react";
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 
-const Transition = { duration: 0.6, ease: easeInOut, type: keyframes };
+const Transition = {
+  duration: 0.6,
+  ease: easeInOut,
+  type: keyframes
+};
 
 const SocialMedia = React.memo(() => {
-
-  const socialLinks = [
-    { Href: "http://wa.me/554391030509", Icon: FaWhatsapp, Title: "Whatsapp Rafaela Mazieiro" },
-    { Href: "https://www.instagram.com/drarafamazieiro", Icon: FaInstagram, Title: "Instagram Rafaela Mazieiro" },
-    { Href: "https://www.facebook.com/rafaela.mazieiro", Icon: FaFacebook, Title: "Facebook Rafaela Mazieiro" },
-  ];
-
   return (
     <motion.div
       transition={Transition}

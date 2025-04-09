@@ -9,7 +9,7 @@ const FontDisplay = Playfair_Display({
   weight: "900",
   preload: true,
   style: "italic",
-  display: "auto",
+  display: "swap",
   variable: "--display",
   subsets: ["latin", "latin-ext", "vietnamese", "cyrillic"],
 });
@@ -19,8 +19,8 @@ const FontRaleway = Raleway({
   weight: ["400", "500", "600"],
   preload: true,
   style: ["normal", "italic"],
-  display: "auto",
-  variable: "--raleway"
+  display: "swap",
+  variable: "--raleway",
 });
 
 export const metadata: Metadata = {
@@ -65,6 +65,7 @@ export const metadata: Metadata = {
   creator: "Fábio Ghizoni",
   publisher: "Fábio Ghizoni",
   applicationName: "Next JS",
+  title: "Dra Rafaela Mazieiro",
   referrer: "origin-when-cross-origin",
   metadataBase: new URL("https://rafaelamazieiro.vercel.app"),
   authors: [
@@ -81,6 +82,8 @@ export const metadata: Metadata = {
     creators: ["Fábio Ghizoni", "Rafael Leuch"],
     description: "Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos?",
   },
+  description: `Sua pele merece mais do que promessas!! Merece resultados! Vamos nessa juntos? Venha para
+    nosso site para ver nossos tratamentos ou agende uma consulta.`,
   appleWebApp: {
     capable: true,
     title: "Rafaela Mazieiro",
@@ -91,7 +94,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" className="antialiased">
       <body className={`${FontRaleway.className} ${FontDisplay.variable} bg-bege`}>
         {children}
         <SpeedInsights />

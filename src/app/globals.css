@@ -3,42 +3,8 @@
 @tailwind utilities;
 
 @layer {
-  html,
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Personalização de scrollbars para navegadores Webkit (Chrome, Safari, Edge) */
-  ::-webkit-scrollbar {
-    width: 9px; /* Largura da barra de rolagem vertical */
-    height: 7px; /* Altura da barra de rolagem horizontal */
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #ffe0e0; /* Cor da trilha da barra de rolagem */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #b56576; /* Cor do polegar da barra de rolagem */
-    border-radius: 4px; /* Bordas arredondadas do polegar */
-  }
-
-  ::-webkit-scrollbar-button {
-    background-color: #b56576; /* Cor dos botões de rolagem (se houver) */
-  }
-
-  ::-webkit-scrollbar-corner {
-    background: #ffe0e0; /* Cor do canto onde as barras de rolagem se encontram */
-  }
-
-  ::-webkit-resizer {
-    background-color: #b56576; /* Cor do redimensionador de elementos com barras de rolagem */
-  }
-
-  /* Personalização de scrollbars para Firefox */
   * {
-    scrollbar-width: thin; /* Define a largura da barra de rolagem (thin ou auto) */
+    scrollbar-width: auto; /* Define a largura da barra de rolagem (thin ou auto) */
     scrollbar-color: #b56576 #ffe0e0; /* Cor do polegar e da trilha (polegar, trilha) */
   }
 }

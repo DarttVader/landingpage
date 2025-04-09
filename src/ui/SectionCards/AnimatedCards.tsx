@@ -1,49 +1,46 @@
-"use client"
+import { shortDescription, ShowAll } from "@/exports";
 import { easeInOut, keyframes, motion } from "framer-motion";
-import Image from "next/image";
-import Img from "public/dermatologia-procedimento-estetico-rosto-1536x864.jpg";
-import { useState } from "react";
-import { FaArrowTurnDown, FaArrowTurnUp } from "react-icons/fa6";
+import Image, { StaticImageData } from "next/image";
 
-type AnimatedProps = {
-  title: string;
-  description: string;
+type AnimatedCardsProps = {
+  card: {
+    id: number;
+    title: string;
+    description: string;
+    image: StaticImageData;
+  };
+  isExpanded: boolean; // Se o card está expandido
+  onToggleExpand: () => void; // Função para alternar a expansão
 };
 
-const AnimatedCards = ({ title, description }: AnimatedProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const toggleDescription = () => {
-    setIsExpanded(!isExpanded);
-  };
+const AnimatedCards = ({ card, isExpanded, onToggleExpand }: AnimatedCardsProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, ease: easeInOut, type: keyframes }}
-      className="bg-fugente flex flex-col items-center justify-between text-white rounded-xl
-        shadow-2xl drop-shadow-2xl">
-      <div className="group pl-6 pt-6 pr-6">
-        <Image src={Img} alt="Foto" className="w-full min-h-96 rounded-xl border-2 border-rosa-claro 
-          group-hover:border-opacity-50 max-1170:min-h-60" />
+      className="flex flex-col items-center justify-between bg-rosa-claro rounded-2xl p-8 border-2
+      border-white shadow-2xl drop-shadow-2xl h-auto max-w-100">
+      <div
+        title={`Imagem sobre ${card.title}`}
+        className="-m-2 rounded-3xl">
+        <Image
+          alt={card.title}
+          src={card.image}
+          className="w-full min-w-80 min-h-80 rounded-3xl max-w-80 max-h-80 max-1170:min-w-60 border-2 
+            border-black/30" />
       </div>
-      <div className="h-full w-full pt-4 pb-4 justify-items-center">
-        <h1 className="text-center text-4xl font-raleway font-bold mb-4">
-          {title} <br />
+      <div className="flex flex-col justify-between h-full w-full pt-4 justify-items-center">
+        <h1 className="-mx-5 text-center text-3xl text-white font-raleway font-bold mb-5">
+          {card.title} <br />
         </h1>
-        <h2 className="text-justify text-3xl hidden ml-6 mr-6">
-          {description}
+        <h2 className="text-2xl text-start text-white bg-black/30 p-2 -m-3 rounded-xl">
+          {isExpanded ? card.description : shortDescription(card.description)}... <br />
+          <ShowAll
+            spanClassName
+            showAll={isExpanded}
+            onToggleExpand={onToggleExpand} />
         </h2>
-        <button
-          onClick={toggleDescription}
-          className="text-2xl font-bold bg-rosa-claro p-2 rounded-xl mt-4 border-2 border-white 
-            hover:contrast-125 hover:scale-105">
-          {isExpanded ? "Clique para ver menos" : "Clique para ver mais"}
-          {isExpanded ? (
-            <FaArrowTurnUp className="inline-block ml-1" />
-          ) : (
-            <FaArrowTurnDown className="inline-block ml-1" />
-          )}
-        </button>
       </div>
     </motion.div>
   );
