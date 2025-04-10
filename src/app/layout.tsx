@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     images: LogoSvg,
     countryName: "Brazil",
     siteName: "Rafaela Mazieiro",
-    title: "WebSite | Rafaela Mazieiro",
+    title: "Dra Rafaela Mazieiro",
     url: "https://rafaelamazieiro.vercel.app",
     authors: ["Fábio Ghizoni", "Rafael Leuch"],
     creators: ["Fábio Ghizoni", "Rafael Leuch"],
