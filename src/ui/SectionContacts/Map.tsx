@@ -18,8 +18,8 @@ const Map = () => {
       const { AdvancedMarkerElement } = await loader.importLibrary("marker");
 
       const position = {
-        lat: -24.5168,
-        lng: -51.66830062,
+        lat: -24.5190991,
+        lng: -51.6733895,
       };
       // Map options
       const mapOptions: google.maps.MapOptions = {

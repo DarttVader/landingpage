@@ -1,13 +1,10 @@
+"use client";
 import { addresses, copyToClipBoard } from "@/exports";
-import { easeInOut, keyframes, motion } from "framer-motion";
 import { MdCopyAll } from "react-icons/md";
 
 const Address = () => {
   return (
-    <motion.h1
-      initial={{ opacity: 0, x: -40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.4, ease: easeInOut, type: keyframes }}
+    <h1
       className="text-4xl bg-gradient-to-r text-transparent self-start brightness-125 contrast-125 
         bg-clip-text from-vinho-normal to-vinho-escuro2">
       Endereço:
@@ -38,7 +35,7 @@ const Address = () => {
           </div>
         ))}
       </div>
-    </motion.h1>
+    </h1>
   );
 };
 

@@ -1,58 +1,38 @@
 "use client";
 import { handleScroll, useClickOutside } from "@/exports";
-import { easeInOut, keyframes, motion } from "framer-motion";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+
 interface OpenMenuProps {
   isOpen?: boolean;
   isUlOpen: boolean;
   toggleMenu: () => void; // Função de abrir/fechar Menu
-  setIsAnimating: React.Dispatch<React.SetStateAction<boolean>>; // Função para alterar o estado de animação
   setIsUlOpen: React.Dispatch<React.SetStateAction<boolean>>; // Função para abrir a parte de consultas
   children?: React.ReactNode; // Passa o MenuClose como filho
 };
 
-const MenuOpen: React.FC<OpenMenuProps> = React.memo(({ isOpen, toggleMenu, setIsAnimating, isUlOpen, setIsUlOpen, children }) => {
+const MenuOpen: React.FC<OpenMenuProps> = React.memo(({ isOpen, toggleMenu, isUlOpen, setIsUlOpen, children }) => {
   const menuRef = useRef<HTMLUListElement | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
 
-  // Efeito que fecha o menu quando o usuário clica fora dele
+  // Fecha o menu quando clica fora
   useClickOutside(menuRef, toggleMenu);
 
-  // Detectar tamanho da tela
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Define que tablets ou menores são 768px ou menos
-    };
-
-    handleResize(); // Chama na montagem
-    window.addEventListener("resize", handleResize); // Adiciona listener para redimensionamento
-
-    return () => window.removeEventListener("resize", handleResize); // Limpeza do listener
-  }, []);
-
-  const handleAnimationComplete = () => {
-    setIsAnimating(false); // Alterna para false quando animação termina
-  };
-
   const handleClick = () => {
-    setIsUlOpen((prev) => !(prev));
+    setIsUlOpen((prev) => !prev);
   };
 
-  if (!isOpen) return children; // Se o menu não estiver aberto, renderiza apenas menuClose(children)
+  if (!isOpen) return children;
 
   return (
-    <motion.ul
+    <ul
       ref={menuRef}
-      animate={{ x: 0, opacity: 1, }}
-      initial={{ x: 600, opacity: 0, }}
-      onAnimationStart={() => setIsAnimating(true)} // Marca o início da animação
-      onAnimationComplete={handleAnimationComplete} // Marca o final da animação
-      transition={{ duration: isMobile ? 0.3 : 0.6, ease: easeInOut, type: keyframes, }}
-      className="flex flex-col fixed h-screen text-3xl bg-vinho-escuro pt-10 rounded-l-xl top-0 z-40 
+      className={`
+        flex flex-col fixed h-screen text-3xl bg-vinho-escuro pt-10 rounded-l-xl top-0 z-40 
         right-0 text-center justify-start font-display text-rosa-claro tracking-widest shadow-2xl 
-          drop-shadow-2xl shadow-black select-none"
+        drop-shadow-2xl shadow-black select-none
+        ${isOpen ? `opacity-100 translate-x-0` : `translate-x-56 opacity-0 pointer-events-none`}
+      `}
     >
       {children}
       <li
@@ -102,7 +82,7 @@ const MenuOpen: React.FC<OpenMenuProps> = React.memo(({ isOpen, toggleMenu, setI
         className="cursor-pointer py-2 px-8 hover:rounded-3xl hover:contrast-125 hover:bg-black/30">
         Tratamentos
       </li>
-    </motion.ul>
+    </ul>
   );
 });
 

@@ -22,6 +22,9 @@ export default {
         7: "7",
         8: "8",
       },
+      translate: {
+        "1,5": "0.375rem",
+      },
       minWidth: {
         67: "16.875rem",
         70: "17.5rem",

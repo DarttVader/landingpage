@@ -1,21 +1,11 @@
 "use client";
 import { scrollToTop } from "@/exports";
-import { easeInOut, keyframes, motion } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa6";
-
-const Transition = {
-  duration: 0.5,
-  ease: easeInOut,
-  type: keyframes
-};
 
 const TopClick = () => {
   return (
-    <motion.div
-      transition={Transition}
-      className="group rounded-full"
-      initial={{ opacity: 0, x: 40 }}
-      whileInView={{ opacity: 1, x: 0 }}>
+    <div
+      className="group rounded-full">
       <button
         title="Voltar ao topo"
         onClick={scrollToTop}
@@ -25,7 +15,7 @@ const TopClick = () => {
           p-2 rounded-full group-hover:scale-105 group-hover:contrast-125 shadow-2xl drop-shadow-2xl">
         <FaArrowUp color="white" size="2rem" />
       </button>
-    </motion.div>
+    </div>
   );
 };
 

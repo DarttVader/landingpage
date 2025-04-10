@@ -1,4 +1,4 @@
-import { CopyRight, MainItens, MenuManager, SectionCards, SectionContacts } from "@/exports";
+import { CopyRight, MainItens, MenuProvider, SectionCards, SectionContacts } from "@/exports";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <main className="flex flex-col space-y-0 w-full h-auto items-center overflow-hidden justify-center
       mx-auto">
-      <MenuManager />
+      <MenuProvider />
       <SectionCards />
       <SectionContacts />
       <MainItens />

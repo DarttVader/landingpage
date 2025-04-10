@@ -1,5 +1,4 @@
 import { handleScroll, spanHandleClick } from "@/exports";
-import { easeInOut, keyframes, motion } from "framer-motion";
 import { FaRegHeart } from "react-icons/fa";
 
 interface TextMainProps {
@@ -14,10 +13,7 @@ const TextMain: React.FC<TextMainProps> = ({ setIsUlOpen, setIsMenuOpen }) => {
     setIsUlOpen(true);
   }
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -80 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, ease: easeInOut, type: keyframes }}
+    <div
       className="flex flex-col w-full h-full justify-center items-center md:order-1 order-2
         -mt-60 bg-white/20 sm:bg-transparent p-2 rounded-xl sm:rounded-none sm:p-0 sm:-mt-0">
       <h1
@@ -52,7 +48,7 @@ const TextMain: React.FC<TextMainProps> = ({ setIsUlOpen, setIsMenuOpen }) => {
           consulta
         </span>.
       </h2>
-    </motion.div>
+    </div>
   );
 };
 

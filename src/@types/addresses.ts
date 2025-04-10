@@ -11,8 +11,4 @@ export const addresses = [
     city: "Ivaiporã PR",
     street: "Avenida Souza Naves, 1760, Centro - 86870-000"
   },
-  {
-    city: "São Paulo SP",
-    street: ""
-  }
 ];

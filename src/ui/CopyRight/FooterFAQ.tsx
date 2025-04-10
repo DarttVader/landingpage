@@ -1,13 +1,9 @@
 "use client"
-import { easeInOut, keyframes, motion } from "framer-motion";
 import Link from "next/link";
 
 const FooterFAQ = () => {
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: easeInOut, type: keyframes }}
+    <footer
       className="w-full h-auto p-1 text-vinho-escuro2 text-center"
     >
       <small className="text-lg">
@@ -23,7 +19,7 @@ const FooterFAQ = () => {
         </Link>
         . Todos os direitos reservados.
       </small>
-    </motion.footer>
+    </footer>
   );
 };
 

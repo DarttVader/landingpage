@@ -1,5 +1,4 @@
 import { spanHandleClick } from "@/exports";
-import { easeInOut, keyframes, motion } from "framer-motion";
 
 interface CloseMenuProps {
   isOpen: boolean;
@@ -13,31 +12,27 @@ const MenuClose: React.FC<CloseMenuProps> = ({ isOpen, toggleMenu, }) => {
     toggleMenu(); // Alterna o estado do menu
   };
   return (
-    <motion.div
+    <div
       onClick={handleToggleMenu} // Aciona o click
-      initial={{ opacity: 0, x: 80 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.25, ease: easeInOut, type: keyframes }}
-      className={`flex flex-col cursor-pointer rounded-md justify-between p-1 py-2 mr-2 self-center shadow-2xl
-        drop-shadow-2xl relative hover:contrast-125 
-        ${isOpen ? `w-8 h-8 z-50 hover:bg-black/30 mb-4` : `w-11 h-11 hover:size-12`}`}
+      className={`flex flex-col cursor-pointer rounded-md justify-between p-1 py-2 mr-2 self-center 
+        shadow-2xl drop-shadow-2xl relative hover:contrast-125 transform transition-transform ease-in-out
+        duration-1000 
+        ${isOpen ? `w-8 h-8 z-50 hover:bg-black/30 mb-4` :
+          `w-11 h-11 hover:size-12`}`}
     >
-      <motion.div
-        transition={{ duration: 0.3, ease: easeInOut, type: keyframes }}
-        className={`h-0.1 bg-rosa-claro rounded-3xl self-end ${isOpen ? "w-full" : "w-10/12"}`}
-        animate={{ rotate: isOpen ? 45 : 0, translateY: isOpen ? "0.365rem" : 0 }}
+      <div
+        className={`h-0.1 bg-rosa-claro rounded-3xl self-end transition-all duration-500 ease-in-out
+          ${isOpen ? "w-full rotate-45 translate-y-1,5" : "w-10/12 translate-y-0 rotate-0"}`}
       />
-      <motion.div
-        animate={{ opacity: isOpen ? 0 : 1 }}
-        transition={{ duration: 0.2, ease: easeInOut, type: keyframes }}
-        className="w-full h-0.2 bg-rosa-claro rounded-3xl"
+      <div
+        className={`w-full h-0.2 bg-rosa-claro rounded-3xl transition-all duration-500 ease-in-out
+          ${isOpen ? "opacity-0" : "opacity-100"}`}
       />
-      <motion.div
-        transition={{ duration: 0.3, ease: easeInOut, type: keyframes }}
-        className="w-full h-0.1 bg-rosa-claro rounded-3xl"
-        animate={{ rotate: isOpen ? -45 : 0, translateY: isOpen ? "-0.365rem" : 0 }}
+      <div
+        className={`w-full h-0.1 bg-rosa-claro rounded-3xl transition-all duration-500 ease-in-out
+          ${isOpen ? "-rotate-45 -translate-y-1,5" : "translate-y-0 rotate-0"}`}
       />
-    </motion.div>
+    </div>
   );
 };
 

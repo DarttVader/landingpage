@@ -1,6 +1,6 @@
 "use client";
 import { Logo, MenuClose, MenuOpen } from "@/exports";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface NavBarProps {
   isOpen: boolean; // Recebe o estado do menu aberto
@@ -10,17 +10,12 @@ interface NavBarProps {
 }
 
 const NavBar: React.FC<NavBarProps> = ({ isOpen, setIsOpen, isUlOpen, setIsUlOpen }) => {
-  // Estado que controla se o menu está aberto ou fechado
-
-  // Estado que controla se uma animação está em andamento
-  const [isAnimating, setIsAnimating] = useState(false);
 
   // Referência para toggleMenu
   const toggleMenuRef = useRef<(() => void) | null>(null);
 
   // Função que alterna o estado do menu (abre ou fecha) e impede alterações durante a animação
   const toggleMenu = () => {
-    if (isAnimating) return; // Não alterna o menu se a animação estiver em andamento
     setIsOpen((prev) => !prev); // Alterna entre aberto e fechado
   };
 
@@ -45,7 +40,6 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, setIsOpen, isUlOpen, setIsUlOpe
         isOpen={isOpen} // Passa o estado de "menu aberto" para o MenuOpen
         isUlOpen={isUlOpen}
         toggleMenu={toggleMenu} // Passa a função para alternar o estado do menu
-        setIsAnimating={setIsAnimating} /* Passa a função para controlar o estado da animação */
         setIsUlOpen={setIsUlOpen}>
         <MenuClose
           isOpen={isOpen} // Passa o estado de "menu aberto" para o MenuClose

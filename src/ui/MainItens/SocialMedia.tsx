@@ -1,20 +1,9 @@
-"use client";
 import { socialLinks } from "@/exports";
-import { easeInOut, keyframes, motion } from "framer-motion";
 import React from "react";
-
-const Transition = {
-  duration: 0.6,
-  ease: easeInOut,
-  type: keyframes
-};
 
 const SocialMedia = React.memo(() => {
   return (
-    <motion.div
-      transition={Transition}
-      initial={{ opacity: 0, x: 40 }}
-      whileInView={{ opacity: 1, x: 0 }}
+    <div
       className="flex flex-col gap-1 min-h-40 justify-end self-center">
       {socialLinks.map((Social, Index) => (
         <a key={Index} href={Social.Href} target="_blank" title={Social.Title}>
@@ -24,7 +13,7 @@ const SocialMedia = React.memo(() => {
           </div>
         </a>
       ))}
-    </motion.div>
+    </div>
   );
 });
 

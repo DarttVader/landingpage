@@ -15,7 +15,7 @@ export { default as SectionMain } from "@/components/SectionMain/SectionMain";
 export { copyToClipBoard } from "@/functions/copyToClipBoard";
 export { useClickOutside } from "@/hooks/useClickOutSide";
 export { CardStateProvider } from "@/providers/CardStateProvider";
-export { default as MenuManager } from "@/providers/MenuManager";
+export { default as MenuProvider } from "@/providers/MenuProvider";
 export { default as FooterFAQ } from "@/ui/CopyRight/FooterFAQ";
 export { default as SocialMedia } from "@/ui/MainItens/SocialMedia";
 export { default as TopClick } from "@/ui/MainItens/TopClick";

@@ -1,5 +1,4 @@
 import { shortDescription, ShowAll } from "@/exports";
-import { easeInOut, keyframes, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 
 type AnimatedCardsProps = {
@@ -15,10 +14,7 @@ type AnimatedCardsProps = {
 
 const AnimatedCards = ({ card, isExpanded, onToggleExpand }: AnimatedCardsProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, ease: easeInOut, type: keyframes }}
+    <div
       className="flex flex-col items-center justify-between bg-rosa-claro rounded-2xl p-8 border-2
       border-white shadow-2xl drop-shadow-2xl h-auto max-w-100">
       <div
@@ -42,7 +38,7 @@ const AnimatedCards = ({ card, isExpanded, onToggleExpand }: AnimatedCardsProps)
             onToggleExpand={onToggleExpand} />
         </h2>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

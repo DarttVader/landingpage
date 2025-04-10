@@ -1,20 +1,10 @@
-import { easeInOut, keyframes, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import LogoSvg from "public/logo.svg";
 
-const Transition = {
-  duration: 0.5,
-  ease: easeInOut,
-  type: keyframes,
-}
-
 const Logo = () => {
   return (
-    <motion.div
-      transition={Transition}
-      animate={{ opacity: 1, x: 0 }}
-      initial={{ opacity: 0, x: -80 }}
+    <div
       className="w-44 h-auto relative group ml-1">
       <Link
         href="/"
@@ -31,7 +21,7 @@ const Logo = () => {
           className="object-contain object-left group-hover:scale-105"
         />
       </Link>
-    </motion.div>
+    </div>
   );
 };
 
