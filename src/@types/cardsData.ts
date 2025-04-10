@@ -50,7 +50,7 @@ export const cardsData = [
   {
     id: 5,
     title: "Cauterização dos Acrocórdons",
-    description: `Acrocórdons são pelinhas pequenas e moles que podem ser removidas rapidamente e de 
+    description: `Acrocórdons são pelinhos pequenos e moles que podem ser removidas rapidamente e de 
     forma indolor no consultório. A cauterização é um procedimento rápido, seguro e eficaz para se 
     livrar dessas pequenas lesões.`,
     image: acrocordons,

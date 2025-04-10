@@ -37,7 +37,7 @@ const TextMain: React.FC<TextMainProps> = ({ setIsUlOpen, setIsMenuOpen }) => {
       <h2
         className="text-4xl text-vinho-escuro italic text-center sm:text-start mx-2
           mt-2">
-        A expêriencia e carinho que sua pele merece! Conheça nossos{" "}
+        A experiência e carinho que sua pele merece! Conheça nossos{" "}
         <span
           onClick={(e) => handleScroll("section-cards", e)}
           className="underline underline-offset-2 text-rosa-claro cursor-pointer hover:contrast-125

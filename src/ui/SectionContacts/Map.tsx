@@ -45,14 +45,14 @@ const Map = () => {
         const div = document.createElement("div");
         div.style.position = "absolute";
         div.style.backgroundColor = "#EA4335";
-        div.style.opacity = "0.9";
+        div.style.opacity = "0.85";
         div.style.padding = "5px";
         div.style.borderColor = "#B31412";
         div.style.borderWidth = "2px";
         div.style.borderRadius = "8px";
         div.style.fontSize = "14px";
         div.style.webkitTextFillColor = "white"; // Cor do texto
-        div.innerHTML = "Dra Rafaela Mazieiro"; // Texto da div
+        div.innerHTML = "Clínica Estética e Saúde - Manoel Ribas"; // Texto da div
 
         // Adicionar a div ao container do mapa
         const panes = overlay.getPanes() as google.maps.MapPanes;
