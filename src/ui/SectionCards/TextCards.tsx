@@ -7,7 +7,7 @@ const TextCards: React.FC<TextProps> = ({ title = "Tratamentos", className = ""
 }) => {
   return (
     <h1
-      className={`text-center tracking-wide self-center mb-5 ${className}`}
+      className={`text-center tracking-wide self-center ${className}`}
     >
       {title}
     </h1>

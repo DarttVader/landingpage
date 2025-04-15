@@ -2,8 +2,7 @@
 import { NavBar, SectionMain } from "@/exports";
 import { useState } from "react";
 
-
-const MenuManager = () => {
+const MenuProvider = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUlOpen, setIsUlOpen] = useState(false);
   return (
@@ -14,4 +13,4 @@ const MenuManager = () => {
   );
 };
 
-export default MenuManager;
+export default MenuProvider;

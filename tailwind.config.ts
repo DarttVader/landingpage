@@ -33,6 +33,9 @@ export default {
       maxWidth: {
         100: "27rem",
       },
+      maxHeight: {
+        100: "27rem",
+      },
       width: {
         image: "43.75rem",
         maximg: "26.688rem",
@@ -83,8 +86,9 @@ export default {
         "max-540": { max: "540px", },
       },
       backgroundImage: {
-        fundo: "url(/fundo.jpg);", //Fundo SectionMain.tsx
-        fundo1: "url(/fundo1.svg)", //Fundo SectionCards.tsx
+        fundo: "url(/fundo.jpg);", //Fundo NavBar.tsx
+        fundo1: "url(/fundo1.svg)", //Fundo SectionMain.tsx
+        fundo2: "url(/fundo2.svg)", //Fundo SectionCards.tsx
       },
     },
   },

@@ -12,12 +12,11 @@ const SectionCards = () => {
   return (
     <section
       id="section-cards"
-      className="flex flex-col w-full h-auto min-h-screen py-10 items-center justify-center 
-      bg-gradient-to-b from-[#EFCCAE] via-fugente/50 to-bege bg-contain bg-center 
-        px-20 space-y-6 max-1170:px-4 max-1170:mt-40">
+      className="flex flex-col w-full h-auto min-h-screen py-10 items-center justify-center bg-fundo2 
+        bg-cover bg-center space-y-6 sm:px-14 md:px-16 lg:px-20 xl:px-24">
       <TextCards className="bg-gradient-to-r text-5xl text-transparent bg-clip-text from-rosa-claro 
         to-fugente font-bold md:text-6xl" />
-      <div className="w-full min-h-screen grid grid-cols-3 gap-5 max-1170:grid-cols-1
+      <div className="w-full min-h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 
         justify-items-center">
         {displayedCards.map((card) => {
           return (
