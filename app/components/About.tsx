@@ -30,8 +30,8 @@ export default function About() {
               <div className="absolute inset-0 bg-linear-to-t from-primary/30 to-transparent" />
             </div>
 
-            {/* Credentials Card */}
-            <div className="absolute -bottom-8 -right-8 glass-card p-6 shadow-2xl max-w-xs">
+            {/* Credentials Card (Desktop) */}
+            <div className="absolute -bottom-8 -right-8 glass-card p-6 shadow-2xl max-w-xs hidden lg:block">
               <h4 className="font-display text-lg font-bold text-dark mb-3">
                 Formação & Credenciais
               </h4>
@@ -62,6 +62,39 @@ export default function About() {
                 </li>
               </ul>
             </div>
+          </div>
+
+          {/* Mobile Credentials Card */}
+          <div className="lg:hidden glass-card p-4 shadow-xl">
+            <h4 className="font-display text-base font-bold text-dark mb-3">
+              Formação & Credenciais
+            </h4>
+            <ul className="space-y-2 text-sm text-text-secondary">
+              <li className="flex items-start gap-2">
+                <svg className="w-4 h-4 text-primary mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                CRM-PR 32856
+              </li>
+              <li className="flex items-start gap-2">
+                <svg className="w-4 h-4 text-primary mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                RQE 21847 - Dermatologia
+              </li>
+              <li className="flex items-start gap-2">
+                <svg className="w-4 h-4 text-primary mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Especialista em Dermatologia Clínica e Estética
+              </li>
+              <li className="flex items-start gap-2">
+                <svg className="w-4 h-4 text-primary mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Membro da Sociedade Brasileira de Dermatologia
+              </li>
+            </ul>
           </div>
 
           {/* Text Content */}

@@ -114,13 +114,6 @@ export const treatments: Treatment[] = [
   },
   {
     id: 12,
-    title: "Blindagem Solar Total",
-    description: "Além do protetor solar, incluir antioxidantes orais, chapéu e óculos pode minimizar o impacto da luz visível.",
-    shortDescription: "Proteção completa contra radiação solar",
-    image: "/solar.jpg",
-  },
-  {
-    id: 13,
     title: "Peeling Químico",
     description: "Renova a pele e pode ajudar em várias queixas, desde manchas e acne até viço e textura.",
     shortDescription: "Renovação celular para manchas, acne e textura",

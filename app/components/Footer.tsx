@@ -108,6 +108,14 @@ export default function Footer() {
                 className="text-primary hover:underline"
               >
                 Fabio Ghizoni
+              </a>{" - "}
+              <a
+                href="https://www.instagram.com/renew_diggital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Renew Digital
               </a>
             </p>
           </div>
