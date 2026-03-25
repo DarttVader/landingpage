@@ -1,3 +1,4 @@
+import { ClinicProvider } from "@/app/contexts/ClinicContext";
 import type { Metadata } from "next";
 import { Playfair_Display, Raleway } from "next/font/google";
 import Script from "next/script";
@@ -96,7 +97,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-raleway antialiased bg-bege text-dark">
-        {children}
+        <ClinicProvider>
+          {children}
+        </ClinicProvider>
       </body>
     </html>
   );

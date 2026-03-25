@@ -3,8 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircleIcon, ClockIcon, MapPinIcon, UsersIcon, WhatsAppIcon } from "./ui/Icons";
-
-const WHATSAPP_LINK = "https://api.whatsapp.com/send/?phone=5543996134770&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.";
+import { useClinic } from "@/app/contexts/ClinicContext";
 
 function TrustBadge({ icon, text }: { icon: string; text: string }) {
   const icons: Record<string, React.ReactNode> = {
@@ -34,6 +33,12 @@ function StarRating() {
 }
 
 export default function Hero() {
+  const { clinic } = useClinic();
+  
+  const whatsappLink = clinic?.contact.link 
+    ? clinic.contact.link 
+    : "https://api.whatsapp.com/send/?phone=5543996134770&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.";
+
   return (
     <section
       id="inicio"
@@ -79,7 +84,7 @@ export default function Hero() {
                 Ver Tratamentos
               </Link>
               <a
-                href={WHATSAPP_LINK}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp justify-center whitespace-nowrap"
