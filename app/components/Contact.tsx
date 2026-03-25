@@ -2,7 +2,8 @@
 
 import { contacts } from "@/types";
 import { useState } from "react";
-import { useClinic } from "../contexts/ClinicContext";
+import { useClinicCity } from "@/app/hooks/useClinic";
+import { getClinicCity } from "@/app/lib/clinic";
 import ContactForm from "./contact/ContactForm";
 import WhatsAppDirect from "./contact/WhatsAppDirect";
 import SocialLinks from "./contact/SocialLinks";
@@ -13,25 +14,13 @@ const cityToWhatsApp: Record<string, string> = {
   "Ivaiporã": contacts[2].link,
 };
 
-const cityKeyMap: Record<string, string> = {
-  "Pitanga": "Pitanga",
-  "Manoel": "Manoel Ribas",
-  "Ivaiporã": "Ivaiporã",
-};
-
-function getInitialCity(clinicCity: string | null): string {
-  if (!clinicCity) return "";
-  const cityKey = clinicCity.split(" ")[0];
-  return cityKeyMap[cityKey] || "";
-}
-
 export default function Contact() {
-  const { clinic } = useClinic();
+  const clinicCity = useClinicCity();
   const [formData, setFormData] = useState(() => ({
     name: "",
     email: "",
     phone: "",
-    city: getInitialCity(clinic?.city ?? null),
+    city: getClinicCity(clinicCity),
     message: "",
     treatment: "",
   }));

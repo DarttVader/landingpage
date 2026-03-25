@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircleIcon, ClockIcon, MapPinIcon, UsersIcon, WhatsAppIcon } from "./ui/Icons";
-import { useClinic } from "@/app/contexts/ClinicContext";
+import { useWhatsAppLink } from "@/app/hooks/useClinic";
 
 function TrustBadge({ icon, text }: { icon: string; text: string }) {
   const icons: Record<string, React.ReactNode> = {
@@ -33,11 +33,7 @@ function StarRating() {
 }
 
 export default function Hero() {
-  const { clinic } = useClinic();
-  
-  const whatsappLink = clinic?.contact.link 
-    ? clinic.contact.link 
-    : "https://api.whatsapp.com/send/?phone=5543996134770&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.";
+  const whatsappLink = useWhatsAppLink();
 
   return (
     <section
@@ -59,7 +55,7 @@ export default function Hero() {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 badge-primary mb-6 animate-fade-in">
               <CheckCircleIcon className="w-4 h-4" />
-              CRM-PR 32856 | RQE 21847
+              CRM-PR 45288
             </div>
 
             <h1 className="heading-1 mb-6 animate-slide-up">

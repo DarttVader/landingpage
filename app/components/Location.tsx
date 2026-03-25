@@ -1,28 +1,20 @@
 "use client";
 
-import { addresses, contacts } from "@/types";
+import { addresses } from "@/types";
 import Image from "next/image";
 import { useState } from "react";
-import { useClinic } from "@/app/contexts/ClinicContext";
-import MapView from "./location/MapView";
+import { useClinicCity } from "@/app/hooks/useClinic";
+import { getClinicIndex, getCurrentAddress, getCurrentContact } from "@/app/lib/clinic";
 import LocationCard from "./location/LocationCard";
-
-const cityIndexMap: Record<string, number> = {
-  "Pitanga": 0,
-  "Manoel": 1,
-  "Ivaiporã": 2,
-};
-
-function getInitialIndex(clinicCity: string | null): number {
-  if (!clinicCity) return 0;
-  const cityKey = clinicCity.split(" ")[0];
-  return cityIndexMap[cityKey] ?? 0;
-}
+import MapView from "./location/MapView";
 
 export default function Location() {
-  const { clinic } = useClinic();
-  const [currentIndex, setCurrentIndex] = useState(() => getInitialIndex(clinic?.city ?? null));
+  const clinicCity = useClinicCity();
   const hasApiKey = Boolean(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY);
+  const [localIndex, setLocalIndex] = useState(0);
+
+  const clinicIndex = getClinicIndex(clinicCity);
+  const displayIndex = clinicCity ? clinicIndex : localIndex;
 
   return (
     <section id="localizacao" className="section-padding bg-bege relative overflow-hidden">
@@ -51,13 +43,13 @@ export default function Location() {
 
           <div className="max-w-sm mx-auto">
             <LocationCard
-              address={addresses[currentIndex]}
-              contact={contacts[currentIndex]}
-              currentIndex={currentIndex}
+              address={getCurrentAddress(displayIndex)}
+              contact={getCurrentContact(displayIndex)}
+              currentIndex={displayIndex}
               total={addresses.length}
-              onPrev={() => setCurrentIndex((currentIndex - 1 + addresses.length) % addresses.length)}
-              onNext={() => setCurrentIndex((currentIndex + 1) % addresses.length)}
-              onDotClick={(i) => setCurrentIndex(i)}
+              onPrev={() => setLocalIndex((current) => (current - 1 + addresses.length) % addresses.length)}
+              onNext={() => setLocalIndex((current) => (current + 1) % addresses.length)}
+              onDotClick={(i) => setLocalIndex(i)}
             />
           </div>
         </div>

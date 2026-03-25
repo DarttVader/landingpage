@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { WhatsAppIcon } from "./ui/Icons";
 import Logo from "./ui/Logo";
-import { useClinic } from "@/app/contexts/ClinicContext";
+import { useWhatsAppLink } from "@/app/hooks/useClinic";
 
 const navLinks = [
   { href: "#inicio", label: "Início" },
@@ -16,11 +16,7 @@ const navLinks = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { clinic } = useClinic();
-
-  const whatsappLink = clinic?.contact.link 
-    ? clinic.contact.link 
-    : "https://api.whatsapp.com/send/?phone=5543996134770&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.";
+  const whatsappLink = useWhatsAppLink();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-white/20">
